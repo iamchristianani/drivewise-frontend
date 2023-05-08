@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "user_id": 1,
+    "car_id": 1,
+    "reservation_date": "2023-05-08",
+    "city": "Nairobi",
+    "created_at": "2023-05-06T00:50:27.608Z",
+    "updated_at": "2023-05-06T00:50:27.608Z"
+  },
+  {
+    "id": 2,
+    "user_id": 2,
+    "car_id": 2,
+    "reservation_date": "2023-05-08",
+    "city": "Lagos",
+    "created_at": "2023-05-06T00:50:27.701Z",
+    "updated_at": "2023-05-06T00:50:27.701Z"
+  },
+  {
+    "id": 3,
+    "user_id": 3,
+    "car_id": 3,
+    "reservation_date": "2023-05-10",
+    "city": "Baghdad",
+    "created_at": "2023-05-06T00:50:27.744Z",
+    "updated_at": "2023-05-06T00:50:27.744Z"
+  },
+  {
+    "id": 4,
+    "user_id": 4,
+    "car_id": 4,
+    "reservation_date": "2023-05-10",
+    "city": "Cairo",
+    "created_at": "2023-05-06T00:50:27.759Z",
+    "updated_at": "2023-05-06T00:50:27.759Z"
+  },
+  {
+    "id": 5,
+    "user_id": 1,
+    "car_id": 5,
+    "reservation_date": "2023-05-12",
+    "city": "Nairobi",
+    "created_at": "2023-05-06T00:50:27.780Z",
+    "updated_at": "2023-05-06T00:50:27.780Z"
+  },
+  {
+    "id": 6,
+    "user_id": 2,
+    "car_id": 6,
+    "reservation_date": "2023-05-12",
+    "city": "Johannesburg",
+    "created_at": "2023-05-06T00:50:27.799Z",
+    "updated_at": "2023-05-06T00:50:27.799Z"
+  },
+  {
+    "id": 7,
+    "user_id": 3,
+    "car_id": 7,
+    "reservation_date": "2023-05-14",
+    "city": "Lagos",
+    "created_at": "2023-05-06T00:50:27.825Z",
+    "updated_at": "2023-05-06T00:50:27.825Z"
+  },
+  {
+    "id": 8,
+    "user_id": 4,
+    "car_id": 8,
+    "reservation_date": "2023-05-14",
+    "city": "Nairobi",
+    "created_at": "2023-05-06T00:50:27.842Z",
+    "updated_at": "2023-05-06T00:50:27.842Z"
+  },
+  {
+    "id": 9,
+    "user_id": 1,
+    "car_id": 9,
+    "reservation_date": "2023-05-16",
+    "city": "Cairo",
+    "created_at": "2023-05-06T00:50:27.856Z",
+    "updated_at": "2023-05-06T00:50:27.856Z"
+  },
+  {
+    "id": 10,
+    "user_id": 2,
+    "car_id": 10,
+    "reservation_date": "2023-05-16",
+    "city": "Baghdad",
+    "created_at": "2023-05-06T00:50:27.883Z",
+    "updated_at": "2023-05-06T00:50:27.883Z"
+  }
+]

@@ -1,18 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import { Provider } from 'react-redux';
-import store from './redux/store';
+import RegisterWithUsername from './components/RegistarWithUsername';
 
 function App() {
   return (
-    <Provider store={store}>
+    <main className="App">
       <Router>
         <Routes>
           <Route path="/" element="Home page" />
+          <Route path="/Registar" element={<RegisterWithUsername />} />
         </Routes>
       </Router>
-    </Provider>
+    </main>
   );
 }
 
