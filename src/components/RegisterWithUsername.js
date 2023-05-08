@@ -45,7 +45,7 @@ const RegisterWithUsername = () => {
               required
             />
           </label>
-          <button type="submit" disabled={username === ''}>Register</button>
+          <button type="submit" disabled={username === ''}>login</button>
         </form>
       </section>
     </>
