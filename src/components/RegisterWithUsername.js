@@ -30,7 +30,7 @@ const RegisterWithUsername = () => {
     <>
       <section className="Register">
         <p className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive">{errMsg}</p>
-        <h1>Register</h1>
+        <h1>login</h1>
         <form onSubmit={handleSubmit}>
 
           <label htmlFor="username">
