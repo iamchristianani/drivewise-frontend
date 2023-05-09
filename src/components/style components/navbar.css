@@ -103,13 +103,13 @@ a {
     transform: translateX(0);
   }
 
-  nav li.active a,
-  nav li:hover a {
-    color: white;
-  }
-
   nav a {
     text-decoration: none;
     transition: 0.3s;
+  }
+
+  nav li.active a,
+  nav li:hover a {
+    color: white;
   }
 }
