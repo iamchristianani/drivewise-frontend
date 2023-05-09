@@ -33,7 +33,7 @@ const RegisterWithUsername = () => {
         <h1>login</h1>
         <form onSubmit={handleSubmit}>
 
-          <label htmlFor="username">
+          <label className="login_label" htmlFor="username">
             Username:
 
             <input
@@ -42,10 +42,11 @@ const RegisterWithUsername = () => {
               autoComplete="off"
               onChange={(e) => setUsename(e.target.value)}
               value={username}
+              className="login_form_comp"
               required
             />
           </label>
-          <button type="submit" disabled={username === ''}>login</button>
+          <button className="login_form_comp" type="submit" disabled={username === ''}>login</button>
         </form>
       </section>
     </>

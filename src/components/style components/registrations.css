@@ -9,21 +9,22 @@
 html {
   font-family: 'Nunito', sans-serif;
   font-size: 22px;
-  color: #fff;
+
+  /* color: #fff; */
 }
 
 body {
   min-height: 100vh;
 }
 
-.App {
+/* .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 1rem 0.5rem;
-}
+} */
 
 .Register {
   width: 100%;
@@ -37,7 +38,7 @@ body {
   box-shadow: 2px 2px 12px -1px black;
 }
 
-form {
+.login_form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -45,31 +46,26 @@ form {
   padding-bottom: 1rem;
 }
 
-a,
+/* a,
 a:visited {
   color: #fff;
-}
+} */
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-button,
-textarea {
+.login_form_comp {
   font-family: 'Nunito', sans-serif;
   font-size: 22px;
   padding: 0.25rem;
   border-radius: 0.5rem;
 }
 
-label,
-button {
+.login_label {
   margin-top: 1rem;
   display: grid;
 }
 
-button {
+/* button {
   padding: 0.5rem;
-}
+} */
 
 .instructions {
   font-size: 0.75rem;

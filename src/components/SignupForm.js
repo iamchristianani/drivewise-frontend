@@ -102,7 +102,7 @@ const SignupForm = () => {
           <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive">{errMsg}</p>
           <h1>Register</h1>
           <form onSubmit={handleSubmit}>
-            <label htmlFor="username">
+            <label className="login_label" htmlFor="username">
               <div>
                 Username:
                 <FontAwesomeIcon icon={faCheck} className={validName ? 'valid' : 'hide'} />
@@ -121,6 +121,7 @@ const SignupForm = () => {
                 aria-describedby="uidnote"
                 onFocus={() => setUserFocus(true)}
                 onBlur={() => setUserFocus(false)}
+                className="login_form_comp"
               />
             </label>
             <p id="uidnote" className={userFocus && user && !validName ? 'instructions' : 'offscreen'}>
@@ -132,7 +133,7 @@ const SignupForm = () => {
               Letters, numbers, underscores, hyphens allowed.
             </p>
 
-            <label htmlFor="email">
+            <label className="login_label" htmlFor="email">
               <div>
                 Email:
                 <FontAwesomeIcon icon={faCheck} className={validEmail ? 'valid' : 'hide'} />
@@ -151,10 +152,11 @@ const SignupForm = () => {
                 aria-describedby="eidnote"
                 onFocus={() => setEmailFocus(true)}
                 onBlur={() => setEmailFocus(false)}
+                className="login_form_comp"
               />
             </label>
 
-            <label htmlFor="password">
+            <label className="login_label" htmlFor="password">
               <div>
                 Password:
                 <FontAwesomeIcon icon={faCheck} className={validPwd ? 'valid' : 'hide'} />
@@ -171,6 +173,7 @@ const SignupForm = () => {
                 aria-describedby="pwdnote"
                 onFocus={() => setPwdFocus(true)}
                 onBlur={() => setPwdFocus(false)}
+                className="login_form_comp"
               />
             </label>
             <p id="pwdnote" className={pwdFocus && !validPwd ? 'instructions' : 'offscreen'}>
@@ -192,7 +195,7 @@ const SignupForm = () => {
               <span aria-label="percent">%</span>
             </p>
 
-            <label htmlFor="confirm_pwd">
+            <label className="login_label" htmlFor="confirm_pwd">
               <div>
                 Confirm Password:
                 <FontAwesomeIcon icon={faCheck} className={validMatch && matchPwd ? 'valid' : 'hide'} />
@@ -208,6 +211,7 @@ const SignupForm = () => {
                 aria-describedby="confirmnote"
                 onFocus={() => setMatchFocus(true)}
                 onBlur={() => setMatchFocus(false)}
+                className="login_form_comp"
               />
             </label>
             <p id="confirmnote" className={matchFocus && !validMatch ? 'instructions' : 'offscreen'}>
@@ -215,7 +219,7 @@ const SignupForm = () => {
               Must match the first password input field.
             </p>
 
-            <button type="submit" disabled={!!(!validName || !validPwd || !validMatch || !validEmail)}>Sign Up</button>
+            <button className="login_form_comp" type="submit" disabled={!!(!validName || !validPwd || !validMatch || !validEmail)}>Sign Up</button>
           </form>
           <p>
             Already registered?
