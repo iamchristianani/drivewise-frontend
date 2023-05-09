@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { registerByUsername } from '../redux/registerByUSername';
-import './style components/registrations.css';
+// import './style components/registrations.css';
 
 const RegisterWithUsername = () => {
   const dispatch = useDispatch();
