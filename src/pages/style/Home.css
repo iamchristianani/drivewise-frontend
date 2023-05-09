@@ -36,7 +36,7 @@
   margin: 10px;
   border-radius: 10px;
   transition: 0.3s;
-  padding: 0 10px 20px 10px;
+  padding: 0 0 20px 10px;
 }
 
 .car_img {
@@ -70,33 +70,42 @@
   color: #ccc;
 }
 
-.left-scroll {
+.scroll {
   position: absolute;
-  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 50%;
   transform: translateY(-50%);
   padding: 20px 20px;
   border: 0;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
   background: #97bf0f;
   color: #fff;
 }
 
+.left-scroll {
+  left: 0;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
 .right-scroll {
-  position: absolute;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 20px 20px;
-  border: 0;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
-  background: #97bf0f;
-  color: #fff;
 }
 
 .grey-bg {
   background: #f5f5f5;
   color: black;
+}
+
+@media (max-width: 420px) {
+  .scroll_container {
+    padding: 0 50px;
+  }
+
+  .scroll {
+    padding: 15px 15px;
+  }
 }

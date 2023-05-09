@@ -31,7 +31,7 @@ const CarsList = () => {
 
   return (
     <div className="scroll_container">
-      <button type="button" className="left-scroll" onClick={leftScroll} aria-label="Scroll Left"><BiLeftArrow /></button>
+      <button type="button" className="scroll left-scroll" onClick={leftScroll} aria-label="Scroll Left"><BiLeftArrow /></button>
       <div className="all_car_box">
         {data.loading && <div>Loading....</div>}
         {!data.loading && data.error ? (
@@ -52,7 +52,7 @@ const CarsList = () => {
           ))
         ) : null}
       </div>
-      <button type="button" className="right-scroll" onClick={rightScroll} aria-label="Scroll right"><BiRightArrow /></button>
+      <button type="button" className="scroll right-scroll" onClick={rightScroll} aria-label="Scroll right"><BiRightArrow /></button>
     </div>
   );
 };
