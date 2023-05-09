@@ -83,9 +83,9 @@ const LoginForm = () => {
         <section className="Register">
           <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive">{errMsg}</p>
           <h1>Log in</h1>
-          <form onSubmit={handleSubmit}>
+          <form className="login_form" onSubmit={handleSubmit}>
 
-            <label htmlFor="email">
+            <label className="login_label" htmlFor="email">
               <div>
                 Email:
                 <FontAwesomeIcon icon={faCheck} className={validEmail ? 'valid' : 'hide'} />
@@ -104,6 +104,7 @@ const LoginForm = () => {
                 aria-describedby="eidnote"
                 onFocus={() => setEmailFocus(true)}
                 onBlur={() => setEmailFocus(false)}
+                className="login_form_comp"
               />
             </label>
             <p id="eidnote" className={emailFocus && email && !validEmail ? 'instructions' : 'offscreen'}>
@@ -115,7 +116,7 @@ const LoginForm = () => {
               Letters, numbers, underscores, hyphens allowed.
             </p>
 
-            <label htmlFor="password">
+            <label className="login_label" htmlFor="password">
               <div>
                 Password:
                 <FontAwesomeIcon icon={faCheck} className={validPwd ? 'valid' : 'hide'} />
@@ -132,6 +133,7 @@ const LoginForm = () => {
                 aria-describedby="pwdnote"
                 onFocus={() => setPwdFocus(true)}
                 onBlur={() => setPwdFocus(false)}
+                className="login_form_comp"
               />
             </label>
             <p id="pwdnote" className={pwdFocus && !validPwd ? 'instructions' : 'offscreen'}>
@@ -153,7 +155,7 @@ const LoginForm = () => {
               <span aria-label="percent">%</span>
             </p>
 
-            <button type="submit" disabled={!!(!validPwd || !validEmail)}>Log in</button>
+            <button className="login_form_comp" type="submit" disabled={!!(!validPwd || !validEmail)}>Log in</button>
           </form>
           <p>
             did not registered yet?
