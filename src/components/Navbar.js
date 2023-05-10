@@ -26,7 +26,9 @@ const Navbar = () => {
 
   return (
     <nav>
-      <img src={logo} alt="Drivewise" />
+      <Link to="/">
+        <img src={logo} alt="Drivewise" />
+      </Link>
       <FontAwesomeIcon icon={faBars} size="lg" className={showMenu ? 'not-active' : ''} onClick={handleMenuToggle} />
       <FontAwesomeIcon icon={faX} className={showMenu ? '' : 'not-active'} onClick={handleMenuToggle} />
       <ul className={`mobile-menu ${showMenu ? 'active' : ''}`}>

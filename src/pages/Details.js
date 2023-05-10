@@ -1,10 +1,21 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import Navbar from '../components/Navbar';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useParams, NavLink } from 'react-router-dom';
+
 import './style/Details.css';
 import { BiLeftArrow } from 'react-icons/bi';
+import { getDetailsAction } from '../redux/cars/carDetails';
+import Navbar from '../components/Navbar';
 
 const Details = () => {
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.details);
+  const { carId } = useParams();
+
+  useEffect(() => {
+    dispatch(getDetailsAction(carId));
+  }, [dispatch, carId]);
+
   return (
     <div className="page_container">
       <Navbar />
@@ -12,80 +23,89 @@ const Details = () => {
         <div className="inner-details">
           <div className="all-details">
             <div className="image-box">
-              <img src="https://c8.alamy.com/comp/2AF282K/mclaren-650-street-or-racing-car-this-car-run-a-race-track-2AF282K.jpg" alt="Car Image" />
+              <img src={data.image} alt={data.model} />
             </div>
             <div className="all-text-box">
               <div className="title-x-desc">
-              <h2>Mercedes-Benz</h2>
-              <p className="details-model">(AMG-GT)</p>
-              <p className="desc-text">The Mercedes-AMG GT is a two-door sports car that offers a thrilling driving experience. The car's V8 engine produces an impressive amount of power and torque, and it can accelerate from 0 to 60 mph in just over 3 seconds. The AMG GT also features a luxurious and well-appointed interior, with high-quality materials and advanced technology.</p>
+                <h2>{data.make}</h2>
+                <p className="details-model">
+                  (
+                  {data.model}
+                  )
+                </p>
+                <p className="desc-text">{data.description}</p>
               </div>
               <div className="price-box">
                 <p>Price:</p>
-                <p className="details-amount">$140000</p>
+                <p className="details-amount">
+                  $
+                  {data.price}
+                </p>
               </div>
               <div className="details-table-container">
                 <table className="details-table">
-                  <tr className="details-table-row">
-                    <td>
-                      <span className="table-left-text" >Year</span>
-                      <span className="table-right-text">2021</span>
-                    </td>
-                  </tr>
-                  <tr className="details-table-row">
-                    <td>
-                      <span className="table-left-text" >Color</span>
-                      <span className="table-right-text">Selenite Grey Metallic</span>
-                    </td>
-                  </tr>
-                  <tr className="details-table-row">
-                    <td>
-                      <span className="table-left-text" >Body Type</span>
-                      <span className="table-right-text">Coupe</span>
-                    </td>
-                  </tr>
-                  <tr className="details-table-row">
-                    <td>
-                      <span className="table-left-text" >Engine Capacity</span>
-                      <span className="table-right-text">4</span>
-                    </td>
-                  </tr>
-                  <tr className="details-table-row">
-                    <td>
-                      <span className="table-left-text" >Engine Cylinders</span>
-                      <span className="table-right-text">8</span>
-                    </td>
-                  </tr>
-                  <tr className="details-table-row">
-                    <td>
-                      <span className="table-left-text" >Turbo</span>
-                      <span className="table-right-text">true</span>
-                    </td>
-                  </tr>
-                  <tr className="details-table-row">
-                    <td>
-                      <span className="table-left-text" >Fuel Type</span>
-                      <span className="table-right-text">Gasoline</span>
-                    </td>
-                  </tr>
-                  <tr className="details-table-row">
-                    <td>
-                      <span className="table-left-text" >Doors</span>
-                      <span className="table-right-text">2</span>
-                    </td>
-                  </tr>
-                  <tr className="details-table-row">
-                    <td>
-                      <span className="table-left-text" >Seats</span>
-                      <span className="table-right-text">2</span>
-                    </td>
-                  </tr>
-                  <tr className="details-table-row">
-                    <td>
-                      <span className="table-left-text" >Mileage</span>
-                      <span className="table-right-text">0</span>
-                    </td>
-                  </tr>
+                  <tbody>
+                    <tr className="details-table-row">
+                      <td>
+                        <span className="table-left-text">Year</span>
+                        <span className="table-right-text">{data.year}</span>
+                      </td>
+                    </tr>
+                    <tr className="details-table-row">
+                      <td>
+                        <span className="table-left-text">Color</span>
+                        <span className="table-right-text">{data.color}</span>
+                      </td>
+                    </tr>
+                    <tr className="details-table-row">
+                      <td>
+                        <span className="table-left-text">Body Type</span>
+                        <span className="table-right-text">{data.body_type}</span>
+                      </td>
+                    </tr>
+                    <tr className="details-table-row">
+                      <td>
+                        <span className="table-left-text">Engine Capacity</span>
+                        <span className="table-right-text">{data.engine_capacity}</span>
+                      </td>
+                    </tr>
+                    <tr className="details-table-row">
+                      <td>
+                        <span className="table-left-text">Engine Cylinders</span>
+                        <span className="table-right-text">{data.engine_cylinders}</span>
+                      </td>
+                    </tr>
+                    <tr className="details-table-row">
+                      <td>
+                        <span className="table-left-text">Turbo</span>
+                        <span className="table-right-text">{typeof data.turbo === 'boolean' ? data.turbo.toString() : 'Not available'}</span>
+                      </td>
+                    </tr>
+                    <tr className="details-table-row">
+                      <td>
+                        <span className="table-left-text">Fuel Type</span>
+                        <span className="table-right-text">{data.fuel_type}</span>
+                      </td>
+                    </tr>
+                    <tr className="details-table-row">
+                      <td>
+                        <span className="table-left-text">Doors</span>
+                        <span className="table-right-text">{data.doors}</span>
+                      </td>
+                    </tr>
+                    <tr className="details-table-row">
+                      <td>
+                        <span className="table-left-text">Seats</span>
+                        <span className="table-right-text">{data.seats}</span>
+                      </td>
+                    </tr>
+                    <tr className="details-table-row">
+                      <td>
+                        <span className="table-left-text">Mileage</span>
+                        <span className="table-right-text">{data.mileage}</span>
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             </div>
@@ -98,7 +118,7 @@ const Details = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Details
+export default Details;
