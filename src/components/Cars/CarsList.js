@@ -33,7 +33,7 @@ const CarsList = () => {
 
   const clickCar = (id) => {
     navigate(`/details/${id}`);
-  }
+  };
 
   return (
     <div className="scroll_container">
@@ -51,7 +51,8 @@ const CarsList = () => {
             <CarsCard
               key={car.id}
               id={car.id}
-              name={car.model}
+              model={car.model}
+              make={car.make}
               description={car.description}
               image={car.image}
               clickCar={clickCar}

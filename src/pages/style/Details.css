@@ -65,7 +65,7 @@
 }
 
 .details-table-row:nth-child(even) {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .details-table-row:nth-child(odd) {
