@@ -11,7 +11,7 @@ const truncateDescription = (description, maxWords) => {
 };
 
 const CarsCard = ({
-  id, name, description, image,
+  id, name, description, image, clickCar,
 }) => {
   const truncatedDescription = truncateDescription(description, 15);
   return (
@@ -26,6 +26,9 @@ const CarsCard = ({
         <div className="dot_divider">.............................</div>
         <div className="car_description">
           <p>{truncatedDescription}</p>
+        </div>
+        <div className="car-details">
+          <button type="button" className="carDetailsButton" onClick={() => (clickCar(id))}>Details</button>
         </div>
       </div>
     </div>
