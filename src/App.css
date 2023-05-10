@@ -1,1 +1,7 @@
 /* This is the style for the full app */
+@media (min-width: 600px) {
+  .App {
+    display: grid;
+    grid-template-columns: minmax(175px, 20%) auto;
+  }
+}

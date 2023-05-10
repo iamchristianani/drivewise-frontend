@@ -1,15 +1,3 @@
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
 nav img {
   width: 19vw;
 }
@@ -41,6 +29,18 @@ a {
 }
 
 @media (max-width: 599px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
   ul.active {
     display: block;
     position: absolute;
@@ -54,14 +54,11 @@ a {
 
 @media (min-width: 600px) {
   nav {
-    position: fixed;
     height: 100vh;
-    max-width: 20%;
     min-width: 175px;
     overflow: hidden;
     display: block;
     padding: 0;
-    padding-top: 50px;
     box-shadow: 1px 6px 4px -2px black;
   }
 
@@ -83,6 +80,7 @@ a {
 
   nav li {
     position: relative;
+    z-index: 2;
   }
 
   nav li::before {
