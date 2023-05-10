@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 // import axios from 'axios';
-import GET_CARS from '../actionTypes';
+import { GET_CARS } from '../actionTypes';
 import Cars from '../../DumyData/cars.json';
 
 const initialState = {
