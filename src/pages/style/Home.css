@@ -2,7 +2,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 100px 0;
+  padding: 100px 0 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 .home_header {
@@ -15,8 +17,8 @@
 }
 
 .scroll_container {
-  padding: 0 100px;
   width: 100%;
+  position: relative;
 }
 
 .all_car_box {

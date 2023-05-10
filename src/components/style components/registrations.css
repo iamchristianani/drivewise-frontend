@@ -1,30 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-family: 'Nunito', sans-serif;
-  font-size: 22px;
-
-  /* color: #fff; */
-}
-
-body {
-  min-height: 100vh;
-}
-
-/* .App {
+.container {
   display: flex;
+  color: #fff;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 1rem 0.5rem;
-} */
+}
 
 .Register {
   width: 100%;
@@ -46,10 +30,10 @@ body {
   padding-bottom: 1rem;
 }
 
-/* a,
-a:visited {
+.login_form a,
+.login_form a:visited {
   color: #fff;
-} */
+}
 
 .login_form_comp {
   font-family: 'Nunito', sans-serif;
@@ -63,9 +47,9 @@ a:visited {
   display: grid;
 }
 
-/* button {
+.login_form button {
   padding: 0.5rem;
-} */
+}
 
 .instructions {
   font-size: 0.75rem;

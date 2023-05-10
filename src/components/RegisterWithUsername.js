@@ -27,11 +27,11 @@ const RegisterWithUsername = () => {
   };
 
   return (
-    <>
+    <div className="container">
       <section className="Register">
         <p className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive">{errMsg}</p>
         <h1>login</h1>
-        <form onSubmit={handleSubmit}>
+        <form className="login_form" onSubmit={handleSubmit}>
 
           <label className="login_label" htmlFor="username">
             Username:
@@ -49,7 +49,7 @@ const RegisterWithUsername = () => {
           <button className="login_form_comp" type="submit" disabled={username === ''}>login</button>
         </form>
       </section>
-    </>
+    </div>
   );
 };
 
