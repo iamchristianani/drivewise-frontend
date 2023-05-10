@@ -1,0 +1,102 @@
+/* import Nunito font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+.container {
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  background-color: rgba(112, 194, 41, 0.8);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem 0.5rem;
+}
+
+.container::before {
+  position: absolute;
+  content: url("../../images/drivewise_logo.png");
+  z-index: -1;
+}
+
+/* ReservationForm styles */
+
+.errmsg {
+  background-color: lightpink;
+  color: firebrick;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+
+.reservation_form {
+  width: 100%;
+  max-width: 420px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+  background-color: rgb(113, 194, 41);
+  box-shadow: 2px 2px 12px -1px black;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+}
+
+.date_label,
+.city_label,
+.login_label {
+  margin-top: 1rem;
+  display: grid;
+}
+
+.date_form_comp,
+.login_form_comp {
+  font-size: 22px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  margin-top: 0.5rem;
+}
+
+.date_form_comp:focus,
+.login_form_comp:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+.city_label input,
+.login_label input {
+  text-transform: lowercase;
+}
+
+.city_label input::placeholder,
+.login_label input::placeholder {
+  color: #fff;
+}
+
+option {
+  color: black;
+}
+
+.reservation_form_comp {
+  padding: 0.5rem;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 22px;
+  margin-top: 1rem;
+}
+
+.reservation_form_comp:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
