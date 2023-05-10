@@ -54,7 +54,7 @@ a {
 
 @media (min-width: 600px) {
   nav {
-    height: 100vh;
+    min-height: 100vh;
     min-width: 175px;
     overflow: hidden;
     display: block;
@@ -63,8 +63,8 @@ a {
   }
 
   nav img {
-    margin-bottom: 100px;
-    width: 90%;
+    margin: 20px 10% 100px;
+    width: 80%;
   }
 
   nav svg {
