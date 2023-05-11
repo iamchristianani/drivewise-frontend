@@ -3,9 +3,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useParams, NavLink, useNavigate } from 'react-router-dom';
 import './style/Details.css';
 import { BiLeftArrow } from 'react-icons/bi';
+import { IoIosArrowDropright } from 'react-icons/io';
 import { getDetailsAction } from '../redux/cars/carDetails';
 import Navbar from '../components/Navbar';
-import { IoIosArrowDropright } from 'react-icons/io';
 
 const Details = () => {
   const dispatch = useDispatch();
@@ -18,8 +18,8 @@ const Details = () => {
   }, [dispatch, carId]);
 
   const reserveBtnClick = () => {
-    navigate("/reservation_form");
-  }
+    navigate('/reservation_form');
+  };
 
   return (
     <div className="page_container">
@@ -113,7 +113,7 @@ const Details = () => {
                   </tbody>
                 </table>
               </div>
-              <button className="details-reserve-btn" onClick={reserveBtnClick}>
+              <button type="button" className="details-reserve-btn" onClick={reserveBtnClick}>
                 Reserve
                 <IoIosArrowDropright className="circle-arrow" />
               </button>
