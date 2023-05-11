@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 100px 0 0;
   width: 100%;
   overflow: hidden;
 }
@@ -19,6 +18,7 @@
 .scroll_container {
   width: 100%;
   position: relative;
+  padding: 0 70px;
 }
 
 .all_car_box {
@@ -61,6 +61,10 @@
   align-items: center;
 }
 
+.car_name p {
+  font-size: 12px;
+}
+
 .dot_divider {
   text-align: center;
   color: #ccc;
@@ -83,6 +87,7 @@
   border: 0;
   background: #97bf0f;
   color: #fff;
+  cursor: pointer;
 }
 
 .left-scroll {
@@ -102,7 +107,21 @@
   color: black;
 }
 
-@media (max-width: 420px) {
+.carDetailsButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 2px;
+  margin-top: 20px;
+  color: #fff;
+  background: #97bf0f;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .home_container {
+    padding: 70px 0 0;
+  }
+
   .scroll_container {
     padding: 0 50px;
   }

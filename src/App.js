@@ -4,6 +4,7 @@ import './App.css';
 import RegisterWithUsername from './components/RegisterWithUsername';
 import Home from './pages/Home';
 import ReservationForm from './pages/ReservationForm';
+import Details from './pages/Details';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/view_all_tests" element="view all tests" />
           <Route path="/reservation_form" element={<ReservationForm />} />
           <Route path="/my_reservations" element="my reservations" />
+          <Route path="/details/:carId" element={<Details />} />
         </Routes>
       </Router>
     </main>
