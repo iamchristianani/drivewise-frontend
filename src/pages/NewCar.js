@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import './style/newCar.css';
 
-const IMAGE_REGEX = /\.(gif|jpe?g|tiff?|png|webp|bmp)$/i;
+const IMAGE_REGEX = /(http)?s?:?(\/\/[^"']*\.(?:png|jpg|jpeg|gif|png|svg))/i;
 
 const NewCar = () => {
   const [carData, setCarData] = useState({
@@ -49,6 +49,9 @@ const NewCar = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
+    if (!IMAGE_REGEX.test(carData.image)) {
+      alert('un vaild image url');
+    }
     // Do something with the carData, e.g. submit it to a server
     console.log(carData);
   }
@@ -56,10 +59,10 @@ const NewCar = () => {
   return (
     <div className="page_container">
       <Navbar />
-      <form onSubmit={handleSubmit} className="details_container">
+      <form onSubmit={handleSubmit} className="newCar_container">
 
-        <div className="inner-details">
-          <div className="all-details">
+        <div className="inner-newCar">
+          <div className="all-newCar">
             <div className="image-box">
               <label htmlFor="newcar-image">
                 Image URL:
@@ -75,7 +78,7 @@ const NewCar = () => {
                     <input id="newcar-make" type="text" name="make" value={carData.make} onChange={handleChange} required />
                   </label>
                 </p>
-                <p className="details-model">
+                <p className="newCar-model">
 
                   <label htmlFor="newcar-model">
                     Model:
@@ -91,15 +94,15 @@ const NewCar = () => {
               </div>
               <label className="price-box" htmlFor="newcar-price">
                 <p>Price:</p>
-                <p className="details-amount">
+                <p className="newCar-amount">
                   $
                   <input id="newcar-price" type="number" name="price" value={carData.price} onChange={handleChange} required />
                 </p>
               </label>
-              <div className="details-table-container">
-                <table className="details-table">
+              <div className="newCar-table-container">
+                <table className="newCar-table">
                   <tbody>
-                    <tr className="details-table-row">
+                    <tr className="newCar-table-row">
                       <td>
                         <label htmlFor="newcar-year">
                           <span className="table-left-text">Year</span>
@@ -107,7 +110,7 @@ const NewCar = () => {
                         </label>
                       </td>
                     </tr>
-                    <tr className="details-table-row">
+                    <tr className="newCar-table-row">
                       <td>
                         <label htmlFor="newcar-color">
                           <span className="table-left-text">Color</span>
@@ -115,7 +118,7 @@ const NewCar = () => {
                         </label>
                       </td>
                     </tr>
-                    <tr className="details-table-row">
+                    <tr className="newCar-table-row">
                       <td>
                         <label htmlFor="newcar-body-type">
                           <span className="table-left-text">Body Type</span>
@@ -123,7 +126,7 @@ const NewCar = () => {
                         </label>
                       </td>
                     </tr>
-                    <tr className="details-table-row">
+                    <tr className="newCar-table-row">
                       <td>
                         <label htmlFor="newcar-engine-capacity">
                           <span className="table-left-text">Engine Capacity</span>
@@ -131,7 +134,7 @@ const NewCar = () => {
                         </label>
                       </td>
                     </tr>
-                    <tr className="details-table-row">
+                    <tr className="newCar-table-row">
                       <td>
                         <label htmlFor="newcar-engine-cylinders">
                           <span className="table-left-text">Engine Cylinders</span>
@@ -139,7 +142,7 @@ const NewCar = () => {
                         </label>
                       </td>
                     </tr>
-                    <tr className="details-table-row">
+                    <tr className="newCar-table-row">
                       <td>
                         <label htmlFor="newcar-horsepower">
                           <span className="table-left-text">horsepower</span>
@@ -147,15 +150,15 @@ const NewCar = () => {
                         </label>
                       </td>
                     </tr>
-                    <tr className="details-table-row">
+                    <tr className="newCar-table-row">
                       <td>
                         <label htmlFor="newcar-torque">
                           <span className="table-left-text">torque</span>
-                          <input className="table-right-text" id="newcar-torque" type="number" name="torque" value={carData.torque} onChange={handleChange} required />
+                          <input className="table-right-text" id="newcar-torque" type="number" name="torque" value={carData.torque} onChange={handleChange} />
                         </label>
                       </td>
                     </tr>
-                    <tr className="details-table-row">
+                    <tr className="newCar-table-row">
                       <td>
                         <label htmlFor="newcar-weight">
                           <span className="table-left-text">weight</span>
@@ -163,7 +166,7 @@ const NewCar = () => {
                         </label>
                       </td>
                     </tr>
-                    <tr className="details-table-row">
+                    <tr className="newCar-table-row">
                       <td>
                         <label htmlFor="newcar-drivetrain">
                           <span className="table-left-text">drivetrain</span>
@@ -171,7 +174,7 @@ const NewCar = () => {
                         </label>
                       </td>
                     </tr>
-                    <tr className="details-table-row">
+                    <tr className="newCar-table-row">
                       <td>
                         <label htmlFor="newcar-transmission">
                           <span className="table-left-text">transmission</span>
@@ -179,7 +182,7 @@ const NewCar = () => {
                         </label>
                       </td>
                     </tr>
-                    <tr className="details-table-row">
+                    <tr className="newCar-table-row">
                       <td>
                         <label htmlFor="newcar-turbo">
                           <span className="table-left-text">Turbo</span>
@@ -187,7 +190,7 @@ const NewCar = () => {
                         </label>
                       </td>
                     </tr>
-                    <tr className="details-table-row">
+                    <tr className="newCar-table-row">
                       <td>
                         <label htmlFor="newcar-fuel-type">
                           <span className="table-left-text">Fuel Type</span>
@@ -195,7 +198,7 @@ const NewCar = () => {
                         </label>
                       </td>
                     </tr>
-                    <tr className="details-table-row">
+                    <tr className="newCar-table-row">
                       <td>
                         <label htmlFor="newcar-doors">
                           <span className="table-left-text">Doors</span>
@@ -203,7 +206,7 @@ const NewCar = () => {
                         </label>
                       </td>
                     </tr>
-                    <tr className="details-table-row">
+                    <tr className="newCar-table-row">
                       <td>
                         <label htmlFor="newcar-seats">
                           <span className="table-left-text">Seats</span>
@@ -211,7 +214,7 @@ const NewCar = () => {
                         </label>
                       </td>
                     </tr>
-                    <tr className="details-table-row">
+                    <tr className="newCar-table-row">
                       <td>
                         <label htmlFor="newcar-mileage">
                           <span className="table-left-text">Mileage</span>
@@ -222,7 +225,7 @@ const NewCar = () => {
                   </tbody>
                 </table>
               </div>
-              <button type="submit" className="details-reserve-btn">submit</button>
+              <button type="submit" className="newCar-reserve-btn">submit</button>
             </div>
           </div>
         </div>
