@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { BiRightArrow, BiLeftArrow } from 'react-icons/bi';
 import { fetchCars } from '../../redux/cars/cars';
 
@@ -8,6 +9,7 @@ import CarsCard from './CarsCard';
 const CarsList = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.cars);
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(fetchCars());
@@ -29,6 +31,10 @@ const CarsList = () => {
     });
   };
 
+  const clickCar = (id) => {
+    navigate(`/details/${id}`);
+  };
+
   return (
     <div className="scroll_container">
       <button type="button" className="scroll left-scroll" onClick={leftScroll} aria-label="Scroll Left"><BiLeftArrow /></button>
@@ -45,9 +51,11 @@ const CarsList = () => {
             <CarsCard
               key={car.id}
               id={car.id}
-              name={car.model}
+              model={car.model}
+              make={car.make}
               description={car.description}
               image={car.image}
+              clickCar={clickCar}
             />
           ))
         ) : null}
