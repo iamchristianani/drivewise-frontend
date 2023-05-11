@@ -16,9 +16,10 @@ const Navbar = () => {
   };
 
   const menuItems = [
-    { label: 'View all tests', to: '/view_all_tests' },
+    { label: 'View all tests', to: '/' },
     { label: 'Reservation form', to: '/reservation_form' },
     { label: 'My reservations', to: '/my_reservations' },
+    { label: 'add car', to: '/new_car' },
   ];
   const handleMenuToggle = () => {
     setShowMenu(!showMenu);
@@ -26,7 +27,9 @@ const Navbar = () => {
 
   return (
     <nav>
-      <img src={logo} alt="Drivewise" />
+      <Link to="/">
+        <img src={logo} alt="Drivewise" />
+      </Link>
       <FontAwesomeIcon icon={faBars} size="lg" className={showMenu ? 'not-active' : ''} onClick={handleMenuToggle} />
       <FontAwesomeIcon icon={faX} className={showMenu ? '' : 'not-active'} onClick={handleMenuToggle} />
       <ul className={`mobile-menu ${showMenu ? 'active' : ''}`}>
