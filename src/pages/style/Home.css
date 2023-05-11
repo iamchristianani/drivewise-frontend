@@ -87,6 +87,7 @@
   border: 0;
   background: #97bf0f;
   color: #fff;
+  cursor: pointer;
 }
 
 .left-scroll {
@@ -113,6 +114,7 @@
   margin-top: 20px;
   color: #fff;
   background: #97bf0f;
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {

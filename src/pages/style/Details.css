@@ -25,6 +25,8 @@
 
 .all-text-box {
   width: 30%;
+  display: flex;
+  flex-direction: column;
 }
 
 .title-x-desc {
@@ -83,6 +85,25 @@
 
 .back-button {
   position: relative;
+}
+
+.details-reserve-btn {
+  width: fit-content;
+  margin: 50px 0 0 0;
+  display: flex;
+  align-items: center;
+  padding: 15px 15px;
+  border: 0;
+  border-radius: 30px;
+  background: #97bf0f;
+  color: #fff;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.circle-arrow {
+  font-size: 20px;
+  margin: 0 0 0 20px;
 }
 
 @media (max-width: 600px) {
