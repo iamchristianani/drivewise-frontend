@@ -1,96 +1,96 @@
-.details_container {
+.newCar_container {
   width: 100%;
 }
 
-.inner-details {
+.inner-newCar {
   display: flex;
   flex-direction: column;
   padding: 50px;
   width: 100%;
 }
 
-.all-details {
+.all-newCar {
   display: flex;
   gap: 20px;
 }
 
-.image-box {
+.newCar_container .image-box {
   width: 70%;
   height: auto;
 }
 
-.image-box img {
+.newCar_container .image-box img {
   width: 100%;
 }
 
-.all-text-box {
+.newCar_container .all-text-box {
   width: 30%;
 }
 
-.title-x-desc {
+.newCar_container .title-x-desc {
   text-align: right;
 }
 
-.desc-text {
+.newCar_container .desc-text {
   font-size: 12px;
 }
 
-.details-table-container {
+.newCar-table-container {
   margin-top: 30px;
 }
 
-.details-model {
+.newCar-model {
   font-size: 12px;
   margin: 10px 0;
 }
 
-.details-table {
+.newCar-table {
   width: 100%;
   font-size: 12px;
   border-collapse: collapse;
 }
 
-.table-left-text {
+.newCar-table-container .table-left-text {
   padding: 0 0 0 10px;
 }
 
-.table-right-text {
+.newCar-table-container .table-right-text {
   float: right;
   padding: 0 10px 0 0;
 }
 
-.details-table-row {
+.newCar-table-row {
   width: 100%;
   height: 30px;
 }
 
-.details-table-row:nth-child(even) {
+.newCar-table-row:nth-child(even) {
   background-color: #fff;
 }
 
-.details-table-row:nth-child(odd) {
+.newCar-table-row:nth-child(odd) {
   background-color: #f3f3f3;
 }
 
-.price-box {
+.newCar_container .price-box {
   margin: 20px 0 0 0;
   text-align: right;
 }
 
-.details-amount {
+.newCar-amount {
   font-size: 40px;
 }
 
-.back-button {
+.newCar_container .back-button {
   position: relative;
 }
 
-.details-reserve-btn {
-  width: fit-content;
-  margin: 50px 0 0 0;
+.newCar-reserve-btn {
+  /* width: fit-content; */
+  margin-top: 50px;
   display: flex;
   align-items: center;
-  padding: 15px 15px;
+  padding: 15px 25px;
   border: 0;
   border-radius: 30px;
   background: #97bf0f;
@@ -110,7 +110,7 @@
   width: 80%;
 }
 
-.details-table-row input {
+.newCar-table-row input {
   width: 50%;
 }
 
@@ -120,27 +120,27 @@ textarea {
 }
 
 @media (max-width: 600px) {
-  .details_container {
+  .newCar_container {
     margin-top: 50px;
   }
 
-  .inner-details {
+  .inner-newCar {
     padding: 20px;
   }
 
-  .all-details {
+  .all-newCar {
     flex-direction: column;
   }
 
-  .image-box {
+  .newCar_container .image-box {
     width: 100%;
   }
 
-  .all-text-box {
+  .newCar_container .all-text-box {
     width: 100%;
   }
 
-  .back-button {
+  .newCar_container .back-button {
     margin: 30px 0 70px 0;
   }
 }
