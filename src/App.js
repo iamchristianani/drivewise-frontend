@@ -16,9 +16,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<RegisterWithUsername />} />
           <Route path="/reservation_form" element={<ReservationForm />} />
-          <Route path="/new_car" element={<NewCar />} />
           <Route path="/my_reservations" element={<MyReservation />} />
           <Route path="/details/:carId" element={<Details />} />
+          <Route path="/new_car" element={<NewCar />} />
         </Routes>
       </Router>
     </main>

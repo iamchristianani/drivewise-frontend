@@ -14,112 +14,69 @@
   gap: 20px;
 }
 
-.newCar_container .image-box {
-  width: 70%;
-  height: auto;
+.new-car-form {
+  width: 500px;
+  margin: 0 auto;
 }
 
-.newCar_container .image-box img {
+.new-car-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.new-car-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.new-car-form input[type="text"],
+.new-car-form input[type="number"],
+.new-car-form textarea {
   width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-.newCar_container .all-text-box {
-  width: 30%;
-}
-
-.newCar_container .title-x-desc {
-  text-align: right;
-}
-
-.newCar_container .desc-text {
-  font-size: 12px;
-}
-
-.newCar-table-container {
-  margin-top: 30px;
-}
-
-.newCar-model {
-  font-size: 12px;
-  margin: 10px 0;
-}
-
-.newCar-table {
-  width: 100%;
-  font-size: 12px;
-  border-collapse: collapse;
-}
-
-.newCar-table-container .table-left-text {
-  padding: 0 0 0 10px;
-}
-
-.newCar-table-container .table-right-text {
-  float: right;
-  padding: 0 10px 0 0;
-}
-
-.newCar-table-row {
-  width: 100%;
-  height: 30px;
-}
-
-.newCar-table-row:nth-child(even) {
-  background-color: #fff;
-}
-
-.newCar-table-row:nth-child(odd) {
-  background-color: #f3f3f3;
-}
-
-.newCar_container .price-box {
-  margin: 20px 0 0 0;
-  text-align: right;
-}
-
-.newCar-amount {
-  font-size: 40px;
-}
-
-.newCar_container .back-button {
-  position: relative;
-}
-
-.newCar-reserve-btn {
-  /* width: fit-content; */
-  margin-top: 50px;
-  display: flex;
-  align-items: center;
-  padding: 15px 25px;
-  border: 0;
-  border-radius: 30px;
-  background: #97bf0f;
+.new-car-form input[type="submit"] {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  background-color: #97bf0f;
   color: #fff;
-  align-self: flex-end;
   cursor: pointer;
 }
 
-#newcar-make {
-  font-size: 1.5em;
-  font-weight: bold;
-  width: 100%;
+.new-car-form input[type="submit"]:hover {
+  background-color: #74960c;
 }
 
-#newcar-price {
-  font-size: 40px;
-  width: 80%;
+.new-car-form textarea {
+  resize: none;
+  max-width: 100%;
+  max-height: 100px;
 }
 
-.newCar-table-row input {
-  width: 50%;
+.new-car-form input[type="checkbox"] {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
-textarea {
-  resize: vertical;
-  width: 100%;
+.new-car-form label[for="turbo"] {
+  display: inline-block;
+  margin-bottom: 40px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .newCar_container {
     margin-top: 50px;
   }
@@ -132,15 +89,32 @@ textarea {
     flex-direction: column;
   }
 
-  .newCar_container .image-box {
-    width: 100%;
+  .new-car-form {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .new-car-form input[type="text"],
+  .new-car-form input[type="number"],
+  .new-car-form textarea {
+    font-size: 14px;
+    padding: 8px;
+    margin-bottom: 10px;
   }
 
-  .newCar_container .all-text-box {
-    width: 100%;
+  .new-car-form input[type="submit"] {
+    font-size: 16px;
+    padding: 8px 16px;
+    margin-top: 10px;
   }
 
-  .newCar_container .back-button {
-    margin: 30px 0 70px 0;
+  .new-car-form label {
+    font-size: 14px;
+  }
+
+  .new-car-form h2 {
+    font-size: 20px;
   }
 }
