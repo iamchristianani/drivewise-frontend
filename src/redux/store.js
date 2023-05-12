@@ -3,6 +3,7 @@ import thunk from 'redux-thunk';
 import authReducer from './authSlice';
 import carsReducer from './cars/cars';
 import detailsReducer from './cars/carDetails';
+import reservationsReducer from './reservations/reservations';
 
 const store = configureStore(
   {
@@ -10,6 +11,7 @@ const store = configureStore(
       authentications: authReducer,
       cars: carsReducer,
       details: detailsReducer,
+      reservations: reservationsReducer,
     },
   },
   applyMiddleware(thunk),
