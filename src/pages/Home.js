@@ -8,7 +8,7 @@ const Home = () => (
     <Navbar />
     <div className="home_container">
       <div className="home_header">
-        <h2>CAR RANGES</h2>
+        <h1>CAR RANGES</h1>
         <p>Please select a car model</p>
         <div className="dot_divider">.............................</div>
       </div>
