@@ -16,9 +16,10 @@ const Navbar = () => {
   };
 
   const menuItems = [
-    { label: 'View all tests', to: '/view_all_tests' },
-    { label: 'Reservation form', to: '/reservation_form' },
-    { label: 'My reservations', to: '/my_reservations' },
+    { label: 'Tests', to: '/' },
+    { label: 'Add Reservation', to: '/reservation_form' },
+    { label: 'My Reservations', to: '/my_reservations' },
+    { label: 'Add Car', to: '/new_car' },
   ];
   const handleMenuToggle = () => {
     setShowMenu(!showMenu);

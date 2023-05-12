@@ -1,0 +1,120 @@
+.newCar_container {
+  width: 100%;
+}
+
+.inner-newCar {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  width: 100%;
+}
+
+.all-newCar {
+  display: flex;
+  gap: 20px;
+}
+
+.new-car-form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.new-car-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.new-car-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.new-car-form input[type="text"],
+.new-car-form input[type="number"],
+.new-car-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.new-car-form input[type="submit"] {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  background-color: #97bf0f;
+  color: #fff;
+  cursor: pointer;
+}
+
+.new-car-form input[type="submit"]:hover {
+  background-color: #74960c;
+}
+
+.new-car-form textarea {
+  resize: none;
+  max-width: 100%;
+  max-height: 100px;
+}
+
+.new-car-form input[type="checkbox"] {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.new-car-form label[for="turbo"] {
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .newCar_container {
+    margin-top: 50px;
+  }
+
+  .inner-newCar {
+    padding: 20px;
+  }
+
+  .all-newCar {
+    flex-direction: column;
+  }
+
+  .new-car-form {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .new-car-form input[type="text"],
+  .new-car-form input[type="number"],
+  .new-car-form textarea {
+    font-size: 14px;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+
+  .new-car-form input[type="submit"] {
+    font-size: 16px;
+    padding: 8px 16px;
+    margin-top: 10px;
+  }
+
+  .new-car-form label {
+    font-size: 14px;
+  }
+
+  .new-car-form h2 {
+    font-size: 20px;
+  }
+}
