@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 // import axios from 'axios';
-import { GET_CARS } from '../actionTypes';
+import { GET_CARS, REMOVE_CAR } from '../actionTypes';
 import Cars from '../../DumyData/cars.json';
 
 const initialState = {
@@ -9,11 +9,20 @@ const initialState = {
   error: '',
 };
 
-export const fetchCars = createAsyncThunk(GET_CARS, () => Cars);
+const fetchCars = createAsyncThunk(GET_CARS, () => Cars);
 // export const fetchCars = createAsyncThunk(GET_CARS, () => Cars, // axios
 //   //   .get('../../DumyData/cars.json')
 //   //   .then((response) => response.data)
 // );
+
+const removeCarAction = createAsyncThunk(
+  REMOVE_CAR,
+  async (id, { getState }) => {
+    const { cars } = getState().cars;
+    const filteredCars = cars.filter((car) => car.id !== id);
+    return filteredCars;
+  },
+);
 
 const carSlice = createSlice({
   name: 'cars',
@@ -35,7 +44,14 @@ const carSlice = createSlice({
       cars: [],
       error: action.error.message,
     }));
+    builder.addCase(removeCarAction.fulfilled, (state, action) => ({
+      ...state,
+      loading: false,
+      cars: action.payload,
+      error: '',
+    }));
   },
 });
 
+export { fetchCars, removeCarAction };
 export default carSlice.reducer;
