@@ -7,6 +7,7 @@ import ReservationForm from './pages/ReservationForm';
 import NewCar from './pages/NewCar';
 import Details from './pages/Details';
 import MyReservation from './pages/MyReservation';
+import DeleteCar from './pages/DeleteCar';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/my_reservations" element={<MyReservation />} />
           <Route path="/details/:carId" element={<Details />} />
           <Route path="/new_car" element={<NewCar />} />
+          <Route path="/delete_car" element={<DeleteCar />} />
         </Routes>
       </Router>
     </main>
