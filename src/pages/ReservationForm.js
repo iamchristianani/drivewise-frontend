@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import './style/ReservationForm.css';
-import cars from '../DumyData/cars.json';
-import { fetchCars } from '../redux/cars/cars';
 import { BiLeftArrow } from 'react-icons/bi';
 import { NavLink } from 'react-router-dom';
+import cars from '../DumyData/cars.json';
+import { fetchCars } from '../redux/cars/cars';
 
 const ReservationForm = () => {
   const [carName, setCarName] = useState('');
@@ -46,8 +46,17 @@ const ReservationForm = () => {
         <div className="reserve-form-container">
           <div className="reserve-form-writeup">
             <h2>BOOK A TEST DRIVE ON DRIVEWISE</h2>
-            <div className="horizontal-rule"></div>
-            <p>On DriveWise, we have {data.cars.length} cars available, ranging from electric to diesel powered automobiles. You can select a car, choose a city, and then pick a date for a comprehensive test drive.</p>
+            <div className="horizontal-rule" />
+            <p>
+              On DriveWise, we have
+              {' '}
+              {' '}
+              {data.cars.length}
+              {' '}
+              cars available, ranging from electric to diesel powered automobiles.
+              You can select a car, choose a city,
+              and then pick a date for a comprehensive test drive.
+            </p>
           </div>
           <div className="reserve-form-box">
             <p className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive">{errMsg}</p>

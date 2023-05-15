@@ -3,11 +3,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import './style/MyReservation.css';
 import { BiLeftArrow } from 'react-icons/bi';
+import { BsBookmarks } from 'react-icons/bs';
 import Navbar from '../components/Navbar';
 import { getReservationsAction } from '../redux/reservations/reservations';
 import { fetchCars } from '../redux/cars/cars';
 import ReservationsTable from '../components/ReservationsTable';
-import { BsBookmarks } from 'react-icons/bs';
 
 const MyReservation = () => {
   const dispatch = useDispatch();

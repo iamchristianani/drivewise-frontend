@@ -3,9 +3,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import './style/DeleteCar.css';
 import { BiLeftArrow } from 'react-icons/bi';
+import { AiFillCar } from 'react-icons/ai';
 import Navbar from '../components/Navbar';
 import { fetchCars, removeCarAction } from '../redux/cars/cars';
-import { AiFillCar } from 'react-icons/ai';
 
 const DeleteCar = () => {
   const dispatch = useDispatch();
@@ -39,7 +39,7 @@ const DeleteCar = () => {
                 </tr>
               </thead>
               <tbody>
-              {
+                {
                   cars.cars.length ? (
                     cars.cars.map((item, index) => (
                       <tr key={item.id}>
@@ -61,7 +61,7 @@ const DeleteCar = () => {
                       </td>
                     </tr>
                   )
-                  
+
                 }
               </tbody>
             </table>
