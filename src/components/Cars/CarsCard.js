@@ -29,7 +29,7 @@ const CarsCard = ({
           <p>{truncatedDescription}</p>
         </div>
         <div className="car-details">
-          <button type="button" className="carDetailsButton" onClick={() => (clickCar(id))}>Details</button>
+          <button type="button" className="carDetailsButton" title="carDetailsButton" onClick={() => (clickCar(id))}>Details</button>
         </div>
       </div>
     </div>
