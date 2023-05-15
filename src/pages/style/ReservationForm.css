@@ -1,24 +1,104 @@
-/* import Nunito font */
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-
 .container {
+  background-image: url("../../images/drivewise_logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.background-wrapper {
+  background-color: rgba(112, 194, 41, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.rsv-scroll {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 5%;
+  padding: 20px 20px;
+  border: 0;
+  background: #fff;
+  color: #97bf0f;
+  cursor: pointer;
+}
+
+.rsv-left-scroll {
+  left: 0;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.reserve-form-container {
   display: flex;
   color: #fff;
+  width: 60%;
   flex-direction: column;
-  background-color: rgba(112, 194, 41, 0.8);
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 1rem 0.5rem;
 }
 
-.container::before {
-  position: absolute;
-  content: url("../../images/drivewise_logo.png");
-  z-index: -1;
+.horizontal-rule {
+  width: 70%;
+  height: 1px;
+  background-color: #fff;
+  margin: 1rem 0;
 }
 
-/* ReservationForm styles */
+.reserve-form-writeup {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reserve-form-writeup h2 {
+  word-spacing: 5px;
+  letter-spacing: 5px;
+}
+
+.reserve-form-box {
+  width: 500px;
+}
+
+.select_form_comp {
+  width: 100%;
+  padding: 12px;
+  border: 0;
+  border-radius: 30px;
+  margin-top: 20px;
+  border-right: 16px solid transparent;
+}
+
+.reserve-form-inputs-box {
+  display: flex;
+}
+
+.reserve-form-inputs {
+  padding: 12px;
+  border-radius: 30px;
+  border: 0;
+  margin-top: 20px;
+  width: 50%;
+}
+
+.city_form_comp {
+  margin-left: 30px;
+}
+
+.button_form_comp {
+  width: 100%;
+  padding: 12px;
+  border: 0;
+  border-radius: 30px;
+  margin-top: 20px;
+}
 
 .errmsg {
   background-color: lightpink;
@@ -33,70 +113,18 @@
   left: -9999px;
 }
 
-.reservation_form {
-  width: 100%;
-  max-width: 420px;
-  min-height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 1rem;
-  background-color: rgb(113, 194, 41);
-  box-shadow: 2px 2px 12px -1px black;
-  color: #fff;
-  font-family: 'Nunito', sans-serif;
-}
 
-.date_label,
-.city_label,
-.login_label {
-  margin-top: 1rem;
-  display: grid;
-}
+@media (max-width: 768px) {
+  .reserve-form-container {
+    width: 100%;
+    padding: 1rem 1rem;
+  }
 
-.date_form_comp,
-.login_form_comp {
-  font-size: 22px;
-  padding: 0.25rem;
-  border-radius: 0.5rem;
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid #fff;
-  color: #fff;
-  margin-top: 0.5rem;
-}
+  .reserve-form-box {
+    width: 300px;
+  }
 
-.date_form_comp:focus,
-.login_form_comp:focus {
-  outline: none;
-  border-color: #fff;
-}
-
-.city_label input,
-.login_label input {
-  text-transform: lowercase;
-}
-
-.city_label input::placeholder,
-.login_label input::placeholder {
-  color: #fff;
-}
-
-option {
-  color: black;
-}
-
-.reservation_form_comp {
-  padding: 0.5rem;
-  background-color: transparent;
-  border: 2px solid #fff;
-  border-radius: 0.5rem;
-  color: #fff;
-  font-size: 22px;
-  margin-top: 1rem;
-}
-
-.reservation_form_comp:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+  .rsv-scroll {
+    padding: 15px 15px;
+  }
 }
