@@ -39,12 +39,13 @@ a {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1000;
   }
 
   ul.active {
     display: block;
     position: absolute;
-    top: 60px;
+    top: 40px;
     left: 0;
     right: 0;
     background-color: #fff;

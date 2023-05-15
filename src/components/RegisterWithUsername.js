@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { registerByUsername } from '../redux/registerByUSername';
-import './style components/registrations.css';
+import logo from '../images/drivewise_logo.png';
+import './style-components/registrations.css';
 
 const RegisterWithUsername = () => {
   const dispatch = useDispatch();
 
-  const [username, setUsename] = useState('');
+  const [username, setUsername] = useState('');
   const [errMsg, setErrMsg] = useState('');
 
   const handleSubmit = async (e) => {
@@ -16,7 +17,7 @@ const RegisterWithUsername = () => {
       console.log(response?.data);
       console.log(response?.accessToken);
       console.log(JSON.stringify(response));
-      setUsename('');
+      setUsername('');
     } catch (err) {
       if (!err?.response) {
         setErrMsg('No Server Response');
@@ -27,26 +28,31 @@ const RegisterWithUsername = () => {
   };
 
   return (
-    <div className="container">
-      <section className="Register">
-        <p className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive">{errMsg}</p>
-        <h1>login</h1>
-        <form className="login_form" onSubmit={handleSubmit}>
-
-          <label className="login_label" htmlFor="username">
+    <div className="register-container">
+      <div className="register-logo-cont">
+        <img className="register-logo" src={logo} alt="logo" />
+      </div>
+      <section className="register">
+        <p className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive">
+          {errMsg}
+        </p>
+        <h1>Login</h1>
+        <form className="login-form" onSubmit={handleSubmit}>
+          <label htmlFor="username">
             Username:
-
             <input
               type="text"
               id="username"
               autoComplete="off"
-              onChange={(e) => setUsename(e.target.value)}
+              onChange={(e) => setUsername(e.target.value)}
               value={username}
-              className="login_form_comp"
+              className="login-input"
               required
             />
           </label>
-          <button className="login_form_comp" type="submit" disabled={username === ''}>login</button>
+          <button className="login-button" type="submit" disabled={username === ''}>
+            Login
+          </button>
         </form>
       </section>
     </div>

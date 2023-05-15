@@ -44,3 +44,21 @@
   padding-right: 20px;
   text-align: right;
 }
+
+.no-data-box {
+  height: 200px;
+}
+
+.no-data-td {
+  text-align: center !important;
+  vertical-align: middle;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.no-data-icon {
+  font-size: 50px;
+  color: #97bf0f;
+}
