@@ -5,6 +5,7 @@ import './style/DeleteCar.css';
 import { BiLeftArrow } from 'react-icons/bi';
 import Navbar from '../components/Navbar';
 import { fetchCars, removeCarAction } from '../redux/cars/cars';
+import { AiFillCar } from 'react-icons/ai';
 
 const DeleteCar = () => {
   const dispatch = useDispatch();
@@ -38,18 +39,29 @@ const DeleteCar = () => {
                 </tr>
               </thead>
               <tbody>
-                {
-                  cars.cars.map((item, index) => (
-                    <tr key={item.id}>
-                      <td>{index + 1}</td>
-                      <td>
-                        {item.make}
-                        {' '}
-                        {item.model}
+              {
+                  cars.cars.length ? (
+                    cars.cars.map((item, index) => (
+                      <tr key={item.id}>
+                        <td>{index + 1}</td>
+                        <td>
+                          {item.make}
+                          {' '}
+                          {item.model}
+                        </td>
+                        <td><button type="button" className="delete-button" onClick={() => handleDelete(item.id)}>Delete</button></td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr className="no-data-box">
+                      <td colSpan="3" className="no-data-td">
+                        <AiFillCar className="no-data-icon" />
+                        <br />
+                        No car available
                       </td>
-                      <td><button type="button" className="delete-button" onClick={() => handleDelete(item.id)}>Delete</button></td>
                     </tr>
-                  ))
+                  )
+                  
                 }
               </tbody>
             </table>

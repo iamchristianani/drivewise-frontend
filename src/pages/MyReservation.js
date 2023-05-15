@@ -7,6 +7,7 @@ import Navbar from '../components/Navbar';
 import { getReservationsAction } from '../redux/reservations/reservations';
 import { fetchCars } from '../redux/cars/cars';
 import ReservationsTable from '../components/ReservationsTable';
+import { BsBookmarks } from 'react-icons/bs';
 
 const MyReservation = () => {
   const dispatch = useDispatch();
@@ -44,15 +45,25 @@ const MyReservation = () => {
               </thead>
               <tbody>
                 {
-                  reservations.map((item) => (
-                    <ReservationsTable
-                      key={item.id}
-                      id={item.id}
-                      carName={getCarName(item.car_id)}
-                      city={item.city}
-                      reservationDate={item.reservation_date}
-                    />
-                  ))
+                  reservations.length ? (
+                    reservations.map((item) => (
+                      <ReservationsTable
+                        key={item.id}
+                        id={item.id}
+                        carName={getCarName(item.car_id)}
+                        city={item.city}
+                        reservationDate={item.reservation_date}
+                      />
+                    ))
+                  ) : (
+                    <tr className="no-data-box">
+                      <td colSpan="3" className="no-data-td">
+                        <BsBookmarks className="no-data-icon" />
+                        <br />
+                        No reservations available
+                      </td>
+                    </tr>
+                  )
                 }
               </tbody>
             </table>
