@@ -5,12 +5,12 @@ export const USER_STORAGE_KEY = 'user';
 
 const initialState = {
   username: null,
-  isLoading: false,
+  isLoading: true,
   isAuthenticated: false,
   error: null,
 };
 
-export const authSlice = createSlice({
+const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
@@ -34,7 +34,7 @@ export const authSlice = createSlice({
   },
 });
 
-export const registerByUsername = (username) => async (dispatch) => {
+export const loginByUsername = (username) => async (dispatch) => {
   dispatch(authSlice.actions.dataRequest());
   try {
     const response = await fetch(`http://localhost:3001/api/v1/users/${username}`, {
@@ -49,6 +49,28 @@ export const registerByUsername = (username) => async (dispatch) => {
     }
     const data = await response.json();
     console.log(data);
+    dispatch(authSlice.actions.loginSuccess(data));
+  } catch (error) {
+    dispatch(authSlice.actions.authFailure(error.message));
+  }
+};
+
+export const signupByUsername = (username) => async (dispatch) => {
+  dispatch(authSlice.actions.dataRequest());
+  try {
+    const response = await fetch('http://localhost:3001/api/v1/users/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username }),
+    });
+
+    if (!response.ok) {
+      throw new Error('Signup Failed');
+    }
+
+    const data = await response.json();
     dispatch(authSlice.actions.loginSuccess(data));
   } catch (error) {
     dispatch(authSlice.actions.authFailure(error.message));

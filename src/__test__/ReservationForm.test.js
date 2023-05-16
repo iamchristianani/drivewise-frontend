@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import RegisterWithUsername from '../components/RegisterWithUsername';
+import LoginWithUsername from '../components/LoginWithUsername';
 
 jest.mock('../redux/registerByUSername', () => ({
   registerByUsername: jest.fn(),
@@ -24,7 +24,7 @@ describe('RegisterWithUsername', () => {
     store.dispatch = jest.fn();
     render(
       <Provider store={store}>
-        <RegisterWithUsername />
+        <LoginWithUsername />
       </Provider>,
     );
   });
