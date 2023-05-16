@@ -10,12 +10,12 @@ import NewCar from './pages/NewCar';
 import Details from './pages/Details';
 import MyReservation from './pages/MyReservation';
 import DeleteCar from './pages/DeleteCar';
-import { loginByUsername } from './redux/loginByUsername';
+import { USER_STORAGE_KEY, loginByUsername } from './redux/loginByUsername';
 
 function App() {
   const dispatch = useDispatch();
   const { isLoading, username } = useSelector((state) => state.authentications);
-  const user = localStorage.getItem('username');
+  const user = localStorage.getItem(USER_STORAGE_KEY);
 
   useEffect(() => {
     const fetchUser = () => {
