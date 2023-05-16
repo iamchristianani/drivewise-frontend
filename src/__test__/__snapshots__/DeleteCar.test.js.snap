@@ -1,0 +1,450 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Test to render all cars and a delete button:  1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="page_container"
+      >
+        <nav>
+          <a
+            href="/"
+          >
+            <img
+              alt="Drivewise"
+              src="drivewise_logo.png"
+            />
+          </a>
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-bars fa-lg "
+            data-icon="bars"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 448 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+              fill="currentColor"
+            />
+          </svg>
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-x not-active"
+            data-icon="x"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 384 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"
+              fill="currentColor"
+            />
+          </svg>
+          <ul
+            class="mobile-menu "
+          >
+            <li
+              class=""
+            >
+              <a
+                href="/"
+              >
+                Cars
+              </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                href="/reservation_form"
+              >
+                Add Reservation
+              </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                href="/my_reservations"
+              >
+                My Reservations
+              </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                href="/new_car"
+              >
+                Add Car
+              </a>
+            </li>
+            <li
+              class=""
+            >
+              <a
+                href="/delete_car"
+              >
+                Delete Car
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div
+          class="details_container"
+        >
+          <div
+            class="inner-details"
+          >
+            <div
+              class="home_header"
+            >
+              <h1>
+                DELETE A CAR
+              </h1>
+              <p>
+                Remove car from the list
+              </p>
+              <div
+                class="dot_divider"
+              >
+                .............................
+              </div>
+            </div>
+            <div
+              class="delete-car-box"
+            >
+              <table
+                class="delete-car-table"
+              >
+                <thead>
+                  <tr>
+                    <th>
+                      #
+                    </th>
+                    <th>
+                      Cars
+                    </th>
+                    <th>
+                      Action
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    class="no-data-box"
+                  >
+                    <td
+                      class="no-data-td"
+                      colspan="3"
+                    >
+                      <svg
+                        class="no-data-icon"
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 1024 1024"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M959 413.4L935.3 372a8 8 0 0 0-10.9-2.9l-50.7 29.6-78.3-216.2a63.9 63.9 0 0 0-60.9-44.4H301.2c-34.7 0-65.5 22.4-76.2 55.5l-74.6 205.2-50.8-29.6a8 8 0 0 0-10.9 2.9L65 413.4c-2.2 3.8-.9 8.6 2.9 10.8l60.4 35.2-14.5 40c-1.2 3.2-1.8 6.6-1.8 10v348.2c0 15.7 11.8 28.4 26.3 28.4h67.6c12.3 0 23-9.3 25.6-22.3l7.7-37.7h545.6l7.7 37.7c2.7 13 13.3 22.3 25.6 22.3h67.6c14.5 0 26.3-12.7 26.3-28.4V509.4c0-3.4-.6-6.8-1.8-10l-14.5-40 60.3-35.2a8 8 0 0 0 3-10.8zM264 621c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm388 75c0 4.4-3.6 8-8 8H380c-4.4 0-8-3.6-8-8v-84c0-4.4 3.6-8 8-8h40c4.4 0 8 3.6 8 8v36h168v-36c0-4.4 3.6-8 8-8h40c4.4 0 8 3.6 8 8v84zm108-75c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zM220 418l72.7-199.9.5-1.3.4-1.3c1.1-3.3 4.1-5.5 7.6-5.5h427.6l75.4 208H220z"
+                        />
+                      </svg>
+                      <br />
+                      No car available
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div
+            class="back-button"
+          >
+            <a
+              aria-current="page"
+              class="active"
+              href="/"
+            >
+              <button
+                aria-label="Scroll Left"
+                class="scroll left-scroll"
+                type="button"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18.464 2.114a.998.998 0 0 0-1.033.063l-13 9a1.003 1.003 0 0 0 0 1.645l13 9A1 1 0 0 0 19 21V3a1 1 0 0 0-.536-.886zM17 19.091 6.757 12 17 4.909v14.182z"
+                  />
+                </svg>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="page_container"
+    >
+      <nav>
+        <a
+          href="/"
+        >
+          <img
+            alt="Drivewise"
+            src="drivewise_logo.png"
+          />
+        </a>
+        <svg
+          aria-hidden="true"
+          class="svg-inline--fa fa-bars fa-lg "
+          data-icon="bars"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+            fill="currentColor"
+          />
+        </svg>
+        <svg
+          aria-hidden="true"
+          class="svg-inline--fa fa-x not-active"
+          data-icon="x"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          viewBox="0 0 384 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"
+            fill="currentColor"
+          />
+        </svg>
+        <ul
+          class="mobile-menu "
+        >
+          <li
+            class=""
+          >
+            <a
+              href="/"
+            >
+              Cars
+            </a>
+          </li>
+          <li
+            class=""
+          >
+            <a
+              href="/reservation_form"
+            >
+              Add Reservation
+            </a>
+          </li>
+          <li
+            class=""
+          >
+            <a
+              href="/my_reservations"
+            >
+              My Reservations
+            </a>
+          </li>
+          <li
+            class=""
+          >
+            <a
+              href="/new_car"
+            >
+              Add Car
+            </a>
+          </li>
+          <li
+            class=""
+          >
+            <a
+              href="/delete_car"
+            >
+              Delete Car
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div
+        class="details_container"
+      >
+        <div
+          class="inner-details"
+        >
+          <div
+            class="home_header"
+          >
+            <h1>
+              DELETE A CAR
+            </h1>
+            <p>
+              Remove car from the list
+            </p>
+            <div
+              class="dot_divider"
+            >
+              .............................
+            </div>
+          </div>
+          <div
+            class="delete-car-box"
+          >
+            <table
+              class="delete-car-table"
+            >
+              <thead>
+                <tr>
+                  <th>
+                    #
+                  </th>
+                  <th>
+                    Cars
+                  </th>
+                  <th>
+                    Action
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  class="no-data-box"
+                >
+                  <td
+                    class="no-data-td"
+                    colspan="3"
+                  >
+                    <svg
+                      class="no-data-icon"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 1024 1024"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M959 413.4L935.3 372a8 8 0 0 0-10.9-2.9l-50.7 29.6-78.3-216.2a63.9 63.9 0 0 0-60.9-44.4H301.2c-34.7 0-65.5 22.4-76.2 55.5l-74.6 205.2-50.8-29.6a8 8 0 0 0-10.9 2.9L65 413.4c-2.2 3.8-.9 8.6 2.9 10.8l60.4 35.2-14.5 40c-1.2 3.2-1.8 6.6-1.8 10v348.2c0 15.7 11.8 28.4 26.3 28.4h67.6c12.3 0 23-9.3 25.6-22.3l7.7-37.7h545.6l7.7 37.7c2.7 13 13.3 22.3 25.6 22.3h67.6c14.5 0 26.3-12.7 26.3-28.4V509.4c0-3.4-.6-6.8-1.8-10l-14.5-40 60.3-35.2a8 8 0 0 0 3-10.8zM264 621c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm388 75c0 4.4-3.6 8-8 8H380c-4.4 0-8-3.6-8-8v-84c0-4.4 3.6-8 8-8h40c4.4 0 8 3.6 8 8v36h168v-36c0-4.4 3.6-8 8-8h40c4.4 0 8 3.6 8 8v84zm108-75c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zM220 418l72.7-199.9.5-1.3.4-1.3c1.1-3.3 4.1-5.5 7.6-5.5h427.6l75.4 208H220z"
+                      />
+                    </svg>
+                    <br />
+                    No car available
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div
+          class="back-button"
+        >
+          <a
+            aria-current="page"
+            class="active"
+            href="/"
+          >
+            <button
+              aria-label="Scroll Left"
+              class="scroll left-scroll"
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.464 2.114a.998.998 0 0 0-1.033.063l-13 9a1.003 1.003 0 0 0 0 1.645l13 9A1 1 0 0 0 19 21V3a1 1 0 0 0-.536-.886zM17 19.091 6.757 12 17 4.909v14.182z"
+                />
+              </svg>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
