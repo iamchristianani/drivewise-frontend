@@ -51,10 +51,9 @@ const NewCar = () => {
     e.preventDefault();
     console.log(carData);
     if (!IMAGE_REGEX.test(carData.image)) {
-      alert('un vaild image url');
+      console.log('un vaild image url');
     }
     // Do something with the carData, e.g. submit it to a server
-    console.log(carData);
   }
 
   return (

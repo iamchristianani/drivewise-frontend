@@ -32,8 +32,8 @@ const Navbar = () => {
         <img src={logo} alt="Drivewise" />
       </Link>
       <FontAwesomeIcon icon={faBars} size="lg" className={showMenu ? 'not-active' : ''} onClick={handleMenuToggle} />
-      <FontAwesomeIcon icon={faX} className={showMenu ? '' : 'not-active'} onClick={handleMenuToggle} />
-      <ul className={`mobile-menu ${showMenu ? 'active' : ''}`}>
+      <FontAwesomeIcon data-testid="mobile-button" icon={faX} className={showMenu ? '' : 'not-active'} onClick={handleMenuToggle} />
+      <ul data-testid="mobile-menu" className={`mobile-menu ${showMenu ? 'active' : ''}`}>
 
         {menuItems.map((item, index) => (
           <li key={index} className={activeItem === index ? 'active' : ''}>

@@ -33,7 +33,7 @@ const RegisterWithUsername = () => {
         <img className="register-logo" src={logo} alt="logo" />
       </div>
       <section className="register">
-        <p className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive">
+        <p data-testid="err-msg" className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive">
           {errMsg}
         </p>
         <h1>Login</h1>
