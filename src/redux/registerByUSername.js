@@ -37,19 +37,18 @@ export const authSlice = createSlice({
 export const registerByUsername = (username) => async (dispatch) => {
   dispatch(authSlice.actions.dataRequest());
   try {
-    const response = await fetch('/api/login', {
-      method: 'POST',
+    const response = await fetch(`http://localhost:3001/api/v1/users/${username}`, {
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ username }),
     });
 
     if (!response.ok) {
       throw new Error('Registration Failed');
     }
-
     const data = await response.json();
+    console.log(data);
     dispatch(authSlice.actions.loginSuccess(data));
   } catch (error) {
     dispatch(authSlice.actions.authFailure(error.message));
