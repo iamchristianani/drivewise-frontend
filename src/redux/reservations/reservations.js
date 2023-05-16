@@ -1,19 +1,33 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { GET_RESERVATIONS } from '../actionTypes';
-import Reservations from '../../DumyData/reservations.json';
-import Users from '../../DumyData/users.json';
+// import Reservations from '../../DumyData/reservations.json';
+// import Users from '../../DumyData/users.json';
 
-const currentUser = Users.find((user) => user.id === 2);
+// const currentUser = Users.find((user) => user.id === 2);
+
+const URL = 'http://localhost:3001/api/v1/users/2/reservations';
+// const getReservationsAction = createAsyncThunk(
+//   GET_RESERVATIONS,
+//   async (id, { dispatch }) => {
+//     const reservations = Reservations.filter(
+//       (reservation) => reservation.user_id === currentUser.id,
+//     );
+//     dispatch({
+//       type: GET_RESERVATIONS,
+//       payload: reservations,
+//     });
+//   },
+// );
 
 const getReservationsAction = createAsyncThunk(
   GET_RESERVATIONS,
   async (id, { dispatch }) => {
-    const reservations = Reservations.filter(
-      (reservation) => reservation.user_id === currentUser.id,
-    );
+    const response = await fetch(URL);
+    const data = await response.json();
+    console.log(data);
     dispatch({
       type: GET_RESERVATIONS,
-      payload: reservations,
+      payload: data,
     });
   },
 );
