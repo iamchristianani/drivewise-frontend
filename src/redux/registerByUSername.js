@@ -1,6 +1,5 @@
 /* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 export const USER_STORAGE_KEY = 'user';
 
@@ -38,8 +37,20 @@ export const authSlice = createSlice({
 export const registerByUsername = (username) => async (dispatch) => {
   dispatch(authSlice.actions.dataRequest());
   try {
-    const response = await axios.post('/api/login', { username });
-    dispatch(authSlice.actions.loginSuccess(response.data));
+    const response = await fetch('/api/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username }),
+    });
+
+    if (!response.ok) {
+      throw new Error('Registration Failed');
+    }
+
+    const data = await response.json();
+    dispatch(authSlice.actions.loginSuccess(data));
   } catch (error) {
     dispatch(authSlice.actions.authFailure(error.message));
   }

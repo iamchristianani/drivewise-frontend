@@ -37,6 +37,7 @@ Object {
             class="svg-inline--fa fa-x not-active"
             data-icon="x"
             data-prefix="fas"
+            data-testid="mobile-button"
             focusable="false"
             role="img"
             viewBox="0 0 384 512"
@@ -49,6 +50,7 @@ Object {
           </svg>
           <ul
             class="mobile-menu "
+            data-testid="mobile-menu"
           >
             <li
               class=""
@@ -201,6 +203,7 @@ Object {
           class="svg-inline--fa fa-x not-active"
           data-icon="x"
           data-prefix="fas"
+          data-testid="mobile-button"
           focusable="false"
           role="img"
           viewBox="0 0 384 512"
@@ -213,6 +216,7 @@ Object {
         </svg>
         <ul
           class="mobile-menu "
+          data-testid="mobile-menu"
         >
           <li
             class=""
