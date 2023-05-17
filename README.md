@@ -177,7 +177,7 @@ If you like this project, give it a ⭐️!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank microverse for the inspiration to do this project.
+We would like to thank [Murat Korkmaz on Behance](https://www.behance.net/muratk) for this [design](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
