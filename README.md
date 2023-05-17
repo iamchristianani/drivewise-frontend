@@ -16,7 +16,7 @@
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
+  - [Prequisites](#prequisites)
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
@@ -68,7 +68,7 @@
 
 To get a local copy up and running, follow these steps.
 
-### Prerequisites
+### Prequisites
 
 In order to run this project you need:
 
@@ -134,7 +134,7 @@ npm run start
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/RoyJumah/hello-react-front-end/issues).
+Feel free to check the [issues page](https://github.com/iamchristianani/drivewise-frontend/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
