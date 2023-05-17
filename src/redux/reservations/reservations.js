@@ -5,7 +5,7 @@ import { GET_RESERVATIONS } from '../actionTypes';
 
 // const currentUser = Users.find((user) => user.id === 2);
 
-const URL = 'http://localhost:3001/api/v1/users/2/reservations';
+const URL = 'https://drivewise.up.railway.app/api/v1/users/2/reservations';
 // const getReservationsAction = createAsyncThunk(
 //   GET_RESERVATIONS,
 //   async (id, { dispatch }) => {
