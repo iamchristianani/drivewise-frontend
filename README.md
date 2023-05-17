@@ -48,6 +48,7 @@
   <ul>
     <li><a href="https://reactjs.org/">React.js</a></li>
      <li><a href="https://redux.js.org/">Redux</a></li>
+    <li><a href="https://semaphoreci.com/community/tutorials/getting-started-with-rspec">RSpec</a></li>
   </ul>
 </details>
 
@@ -74,6 +75,7 @@ In order to run this project you need:
 
 - React
 - Redux
+- RSpec
 
 ### Setup
 
