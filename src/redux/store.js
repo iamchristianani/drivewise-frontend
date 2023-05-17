@@ -1,14 +1,14 @@
 import { configureStore, applyMiddleware } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
-import authReducer from './authSlice';
 import carsReducer from './cars/cars';
 import detailsReducer from './cars/carDetails';
 import reservationsReducer from './reservations/reservations';
+import authSlice from './loginByUsername';
 
 const store = configureStore(
   {
     reducer: {
-      authentications: authReducer,
+      authentications: authSlice,
       cars: carsReducer,
       details: detailsReducer,
       reservations: reservationsReducer,

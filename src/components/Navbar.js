@@ -15,6 +15,11 @@ const Navbar = () => {
     setActiveItem(index);
   };
 
+  const handleSignout = () => {
+    localStorage.removeItem('username');
+    window.location.href = window.location.origin;
+  };
+
   const menuItems = [
     { label: 'Cars', to: '/' },
     { label: 'Add Reservation', to: '/reservation_form' },
@@ -41,6 +46,7 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+      <button type="button" onClick={handleSignout}>sign out</button>
     </nav>
   );
 };
