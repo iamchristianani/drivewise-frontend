@@ -45,8 +45,8 @@ const Navbar = () => {
             <Link to={item.to} onClick={() => handleClick(index)}>{item.label}</Link>
           </li>
         ))}
+        <button type="button" className="sing-out" onClick={handleSignout}>sign out</button>
       </ul>
-      <button type="button" onClick={handleSignout}>sign out</button>
     </nav>
   );
 };

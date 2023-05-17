@@ -28,6 +28,17 @@ nav a {
   display: block;
 }
 
+.sing-out {
+  background-color: rgb(113 194 41);
+  border: none;
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
 @media (max-width: 599px) {
   nav {
     display: flex;
