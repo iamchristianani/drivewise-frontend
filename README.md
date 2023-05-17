@@ -104,6 +104,13 @@ Example command:
 ```sh
 npm run start
 ```
+### Run tests
+
+To run tests, run the following command:
+
+```sh
+  $ npm run test
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
