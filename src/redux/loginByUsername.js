@@ -22,7 +22,7 @@ const authSlice = createSlice({
       state.isLoading = false;
       state.isAuthenticated = true;
       state.error = null;
-      localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(state));
+      localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(state.username));
     },
     authFailure: (state, action) => {
       state.username = null;
@@ -49,32 +49,17 @@ export const loginByUsername = (username) => async (dispatch) => {
     }
     const data = await response.json();
     console.log(data);
+    localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(data));
     dispatch(authSlice.actions.loginSuccess(data));
   } catch (error) {
     dispatch(authSlice.actions.authFailure(error.message));
   }
 };
 
-export const signupByUsername = (username) => async (dispatch) => {
+export const signupByUsername = () => async (dispatch) => {
   dispatch(authSlice.actions.dataRequest());
-  try {
-    const response = await fetch('http://localhost:3001/api/v1/users/signup', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ username }),
-    });
-
-    if (!response.ok) {
-      throw new Error('Signup Failed');
-    }
-
-    const data = await response.json();
-    dispatch(authSlice.actions.loginSuccess(data));
-  } catch (error) {
-    dispatch(authSlice.actions.authFailure(error.message));
-  }
+  localStorage.removeItem(USER_STORAGE_KEY);
+  dispatch(authSlice.actions.loginSuccess(null));
 };
 
 export default authSlice.reducer;
