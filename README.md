@@ -37,7 +37,7 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 # Backend App Link <a name ='backend'></a>
-[Backend App Link](https://github.com/RoyJumah/hello-rails-back-end)
+[Backend App Link](https://github.com/iamchristianani/drivewise-backend.git)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -56,8 +56,10 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Display different greeting from an API**
-
+- **Easy Test Drive Scheduling**
+- **Extensive Vehicle Selection**
+- **Intuitive Booking Management**
+- **Seamless CRUD Functionality**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -79,7 +81,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/RoyJumah/hello-react-front-end.git
+  git clone https://github.com/iamchristianani/drivewise-frontend.git
 ```
 
 ### Install
@@ -87,7 +89,7 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd Hello_React-Frontend
+  cd drivewise-frontend
  npm install
 ```
 
@@ -98,7 +100,7 @@ To run the project, execute the following command:
 Example command:
 
 ```sh
-npm start
+npm run start
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -119,7 +121,10 @@ npm start
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Adding new greetings and allowing users to do so as well]**
+- [ ] **[Enhanced Test Drive Customization]**
+- [ ] **[Advanced Vehicle Recommendation]**
+- [ ] **[Smart Notification System]**
+- [ ] **[Integrated Payment Options]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
