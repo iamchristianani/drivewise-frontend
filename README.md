@@ -118,11 +118,29 @@ To run tests, run the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author1**
+👤 **Roy Jumah**
 
 - GitHub: [@RoyJumah](https://github.com/RoyJumah)
 - Twitter: [@RoyJumah](https://twitter.com/RoyJumah)
 - LinkedIn: [roy jumah](https://www.linkedin.com/in/roy-jumah/)
+
+👤 **Yuvenal Njoroge**
+
+- GitHub: [@yuvenalmash](https://github.com/yuvenalmash)
+- Twitter: [@_Juvenal_](https://twitter.com/_Juvenal)
+- LinkedIn: [Yuvenal Njoroge](https://linkedin.com/in/yuvenal-njoroge)
+
+👤 **Christian Ani**
+
+- GitHub: [@anichristian](https://github.com/iamchristianani)
+- Twitter: [@ChristianANi](https://twitter.com/)
+- LinkedIn: [chrisitian_ani](https://www.linkedin.com/)
+
+👤 **Ahmed Abas**
+
+- GitHub: [@Ahmed Abas](https://github.com/boo-shehab)
+- Twitter: [abasAhmed](https://twitter.com/)
+- LinkedIn: [ahmed_abas](https://www.linkedin.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
