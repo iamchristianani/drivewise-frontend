@@ -5,18 +5,21 @@ import { Link } from 'react-router-dom';
 import './style-components/navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faX } from '@fortawesome/free-solid-svg-icons';
+import { useDispatch } from 'react-redux';
 import logo from '../images/drivewise_logo.png';
+import { signoutByUsername } from '../redux/loginByUsername';
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [activeItem, setActiveItem] = useState(null);
+  const dispatch = useDispatch();
 
   const handleClick = (index) => {
     setActiveItem(index);
   };
 
   const handleSignout = () => {
-    localStorage.removeItem('username');
+    dispatch(signoutByUsername());
     window.location.href = window.location.origin;
   };
 

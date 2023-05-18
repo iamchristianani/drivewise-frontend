@@ -14,7 +14,7 @@ const initialState = {
 //   //   .get('../../DumyData/cars.json')
 //   //   .then((response) => response.data)
 // );
-const URL = 'http://localhost:3001/api/v1/cars';
+const URL = 'https://drivewise.up.railway.app/api/v1/cars';
 const fetchCars = createAsyncThunk(GET_CARS, async () => {
   const response = await fetch(URL);
   const data = await response.json();

@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import './style/ReservationForm.css';
 import { BiLeftArrow } from 'react-icons/bi';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import cars from '../DumyData/cars.json';
 import { fetchCars } from '../redux/cars/cars';
 
 const ReservationForm = () => {
-  const [carName, setCarName] = useState('');
+  const { user } = useSelector((state) => state.authentications);
+  const navigate = useNavigate();
+  const [car, setCar] = useState([0, '']);
   const [date, setDate] = useState('');
   const [city, setCity] = useState('');
   const [errMsg, setErrMsg] = useState('');
@@ -21,11 +24,13 @@ const ReservationForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (carName === '' || date === '' || city === '') return;
+    if (car === '' || date === '' || city === '') return;
     try {
-      setCarName('');
+      await axios.post(`https://drivewise.up.railway.app/api/v1/users/${user.id}/reservations`, { car_id: 1, reservation_date: date, city });
+      setCar([0, '']);
       setDate('');
       setCity('');
+      navigate('/');
     } catch (err) {
       if (!err?.response) {
         setErrMsg('No Server Response');
@@ -64,8 +69,8 @@ const ReservationForm = () => {
 
               <select
                 id="car"
-                onChange={(e) => setCarName(e.target.value)}
-                value={carName}
+                onChange={(e) => setCar(e.target.value)}
+                value={car}
                 className="select_form_comp"
                 required
               >
@@ -73,7 +78,7 @@ const ReservationForm = () => {
                   Select Car
                 </option>
                 {cars.map((car) => (
-                  <option key={car.id} value={car.model}>
+                  <option key={car.id} value={car.id}>
                     {car.model}
                   </option>
                 ))}
@@ -101,7 +106,7 @@ const ReservationForm = () => {
                 />
               </div>
 
-              <button className="button_form_comp" type="submit" disabled={carName === '' || city === '' || date === ''}>Reserve</button>
+              <button className="button_form_comp" type="submit" disabled={car === '' || city === '' || date === ''}>Reserve</button>
             </form>
           </div>
         </div>

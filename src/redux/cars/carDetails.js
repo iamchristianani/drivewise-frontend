@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { GET_CAR_DETAILS } from '../actionTypes';
 // import Cars from '../../DumyData/cars.json';
 
-const URL = 'http://localhost:3001/api/v1/cars/';
+const URL = 'https://drivewise.up.railway.app/api/v1/cars/';
 
 // const getDetailsAction = createAsyncThunk(
 //   GET_CAR_DETAILS,

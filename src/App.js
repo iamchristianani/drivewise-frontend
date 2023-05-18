@@ -15,15 +15,16 @@ import { USER_STORAGE_KEY, loginByUsername } from './redux/loginByUsername';
 function App() {
   const dispatch = useDispatch();
   const { isLoading, username } = useSelector((state) => state.authentications);
-  const user = localStorage.getItem(USER_STORAGE_KEY);
-
+  let user = null;
   useEffect(() => {
+    user = localStorage.getItem(USER_STORAGE_KEY);
     const fetchUser = () => {
-      dispatch(loginByUsername(user));
+      if (user) { dispatch(loginByUsername(user.slice(1, user.length - 1))); } else {
+        dispatch(loginByUsername(user));
+      }
     };
-
     fetchUser();
-  }, [dispatch, user, username]);
+  }, []);
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -42,7 +43,7 @@ function App() {
     <main className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Navigate to="/" />} />
+        <Route path="*" element={<Navigate to="/" />} />
         <Route path="/signup" element={<Navigate to="/" />} />
         <Route path="/reservation_form" element={<ReservationForm />} />
         <Route path="/my_reservations" element={<MyReservation />} />
