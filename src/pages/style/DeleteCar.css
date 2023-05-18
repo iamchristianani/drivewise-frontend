@@ -1,0 +1,64 @@
+.delete-car-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.delete-car-table th,
+.delete-car-table td {
+  padding: 8px;
+  text-align: left;
+}
+
+.delete-car-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.delete-car tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.delete-car-table tr:hover {
+  background-color: #ddd;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+.delete-car-table td:last-child {
+  padding-right: 5px;
+  text-align: right;
+}
+
+.delete-car-table th:last-child {
+  padding-right: 20px;
+  text-align: right;
+}
+
+.no-data-box {
+  height: 200px;
+}
+
+.no-data-td {
+  text-align: center !important;
+  vertical-align: middle;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.no-data-icon {
+  font-size: 50px;
+  color: #97bf0f;
+}

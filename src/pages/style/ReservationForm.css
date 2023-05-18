@@ -1,0 +1,129 @@
+.container {
+  background-image: url("../../images/drivewise_logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.background-wrapper {
+  background-color: rgba(112, 194, 41, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.rsv-scroll {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 5%;
+  padding: 20px 20px;
+  border: 0;
+  background: #fff;
+  color: #97bf0f;
+  cursor: pointer;
+}
+
+.rsv-left-scroll {
+  left: 0;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.reserve-form-container {
+  display: flex;
+  color: #fff;
+  width: 60%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem 0.5rem;
+}
+
+.horizontal-rule {
+  width: 70%;
+  height: 1px;
+  background-color: #fff;
+  margin: 1rem 0;
+}
+
+.reserve-form-writeup {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reserve-form-writeup h2 {
+  word-spacing: 5px;
+  letter-spacing: 5px;
+}
+
+.reserve-form-box {
+  width: 500px;
+}
+
+.select_form_comp {
+  width: 100%;
+  padding: 12px;
+  border: 0;
+  border-radius: 30px;
+  margin-top: 20px;
+  border-right: 16px solid transparent;
+}
+
+.reserve-form-inputs-box {
+  display: flex;
+}
+
+.reserve-form-inputs {
+  padding: 12px;
+  border-radius: 30px;
+  border: 0;
+  margin-top: 20px;
+  width: 50%;
+}
+
+.city_form_comp {
+  margin-left: 30px;
+}
+
+.button_form_comp {
+  width: 100%;
+  padding: 12px;
+  border: 0;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+
+.errmsg {
+  background-color: lightpink;
+  color: firebrick;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+
+@media (max-width: 768px) {
+  .reserve-form-container {
+    width: 100%;
+    padding: 1rem 1rem;
+  }
+
+  .reserve-form-box {
+    width: 300px;
+  }
+
+  .rsv-scroll {
+    padding: 15px 15px;
+  }
+}
