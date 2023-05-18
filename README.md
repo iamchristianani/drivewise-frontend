@@ -45,7 +45,9 @@
     <td><img src="https://github.com/iamchristianani/drivewise-frontend/assets/61903079/5194a563-b566-4e5c-b0ad-a265f9912f9b"></td>
   </tr>
   </table>
+  
 # Backend App Link <a name ='backend'></a>
+
 [Backend App Link](https://github.com/iamchristianani/drivewise-backend.git)
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -70,6 +72,14 @@
 - **Extensive Vehicle Selection**
 - **Intuitive Booking Management**
 - **Seamless CRUD Functionality**
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://rails-budget-app-5jzx.onrender.com)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
