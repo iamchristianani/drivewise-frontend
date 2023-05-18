@@ -138,9 +138,9 @@ To run tests, run the following command:
 
 👤 **Ahmed Abas**
 
-- GitHub: [@Ahmed Abas](https://github.com/boo-shehab)
-- Twitter: [abasAhmed](https://twitter.com/)
-- LinkedIn: [ahmed_abas](https://www.linkedin.com/)
+- GitHub: [@boo-shehab](https://github.com/boo-shehab)
+- Twitter: [@boo_shehab2000](https://twitter.com/boo_shehab2000)
+- LinkedIn: [boo-shehab](https://www.linkedin.com/in/boo-shehab)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
