@@ -14,14 +14,10 @@ const SignupWithUsername = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = dispatch(signupByUsername(username));
+      dispatch(signupByUsername(username));
       setUsername('');
     } catch (err) {
-      if (!err?.response) {
-        setErrMsg('No Server Response');
-      } else {
-        setErrMsg('Registration Failed');
-      }
+      setErrMsg('Sign Up Failed');
     }
   };
 

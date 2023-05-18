@@ -4,7 +4,6 @@ import './style/ReservationForm.css';
 import { BiLeftArrow } from 'react-icons/bi';
 import { NavLink, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import cars from '../DumyData/cars.json';
 import { fetchCars } from '../redux/cars/cars';
 
 const ReservationForm = () => {
@@ -79,7 +78,11 @@ const ReservationForm = () => {
                 </option>
                 {data.cars.map((car) => (
                   <option key={car.id} value={car.id}>
-                    {car.make} {' '} {car.model}
+                    {car.make}
+                    {' '}
+                    {' '}
+                    {' '}
+                    {car.model}
                   </option>
                 ))}
               </select>

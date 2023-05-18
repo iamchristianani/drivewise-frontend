@@ -14,14 +14,10 @@ const LoginWithUsername = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = dispatch(loginByUsername(username));
+      dispatch(loginByUsername(username));
       setUsername('');
     } catch (err) {
-      if (!err?.response) {
-        setErrMsg('No Server Response');
-      } else {
-        setErrMsg('Login Failed');
-      }
+      setErrMsg('Login Failed');
     }
   };
 
