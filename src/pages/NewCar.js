@@ -47,14 +47,12 @@ const NewCar = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log(car);
     try {
       await axios.post('https://drivewise.up.railway.app/api/v1/cars', car);
       navigate('/');
     } catch (error) {
       console.log(error);
     }
-    // Do something with the carData, e.g. submit it to a server
   }
 
   return (

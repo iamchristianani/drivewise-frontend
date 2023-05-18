@@ -14,17 +14,10 @@ const LoginWithUsername = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = dispatch(loginByUsername(username));
-      console.log(response?.data);
-      console.log(response?.accessToken);
-      console.log(JSON.stringify(response));
+      dispatch(loginByUsername(username));
       setUsername('');
     } catch (err) {
-      if (!err?.response) {
-        setErrMsg('No Server Response');
-      } else {
-        setErrMsg('Login Failed');
-      }
+      setErrMsg('Login Failed');
     }
   };
 
@@ -61,7 +54,6 @@ const LoginWithUsername = () => {
             <Link to="/signup" className="signup-link">Sign Up</Link>
           </p>
           {' '}
-          {/* Add this link */}
           <button className="login-button" type="submit" disabled={username === ''}>
             Login
           </button>

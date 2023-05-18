@@ -37,7 +37,6 @@ const authSlice = createSlice({
       localStorage.removeItem(USER_STORAGE_KEY);
     },
     authFailure: (state, action) => {
-      console.log(action.payload);
       state.username = null;
       state.user = null;
       state.isLoading = false;
@@ -52,7 +51,6 @@ export const loginByUsername = (username) => async (dispatch) => {
   try {
     const response = await fetch(`${URL}/${username}`);
     const data = await response.json();
-    console.log(data);
     dispatch(authSlice.actions.loginSuccess(data));
   } catch (error) {
     dispatch(authSlice.actions.authFailure(error.message));
@@ -61,16 +59,12 @@ export const loginByUsername = (username) => async (dispatch) => {
 
 export const signupByUsername = (username) => async (dispatch) => {
   dispatch(authSlice.actions.dataRequest());
-  console.log(username);
   try {
-    // Send a request to create a new user with the provided username
     await axios.post(`${URL}`, { username });
 
-    // Retrieve the user data from the backend
     const response = await fetch(`${URL}/${username}`);
     const data = await response.json();
 
-    // Dispatch the action with the retrieved user data
     dispatch(authSlice.actions.loginSuccess(data));
   } catch (error) {
     dispatch(authSlice.actions.authFailure(error.message));

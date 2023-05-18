@@ -1,4 +1,3 @@
-// SignupWithUsername.js
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -15,17 +14,10 @@ const SignupWithUsername = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = dispatch(signupByUsername(username));
-      console.log(response?.data);
-      console.log(response?.accessToken);
-      console.log(JSON.stringify(response));
+      dispatch(signupByUsername(username));
       setUsername('');
     } catch (err) {
-      if (!err?.response) {
-        setErrMsg('No Server Response');
-      } else {
-        setErrMsg('Registration Failed');
-      }
+      setErrMsg('Sign Up Failed');
     }
   };
 

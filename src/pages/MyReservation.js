@@ -13,10 +13,11 @@ const MyReservation = () => {
   const dispatch = useDispatch();
   const reservations = useSelector((state) => state.reservations);
   const cars = useSelector((state) => state.cars);
+  const { user } = useSelector((state) => state.authentications);
 
   useEffect(() => {
     dispatch(fetchCars());
-    dispatch(getReservationsAction());
+    dispatch(getReservationsAction(user.id));
   }, [dispatch]);
 
   const getCarName = (carId) => {
