@@ -15,9 +15,6 @@ const LoginWithUsername = () => {
     e.preventDefault();
     try {
       const response = dispatch(loginByUsername(username));
-      console.log(response?.data);
-      console.log(response?.accessToken);
-      console.log(JSON.stringify(response));
       setUsername('');
     } catch (err) {
       if (!err?.response) {
@@ -61,7 +58,6 @@ const LoginWithUsername = () => {
             <Link to="/signup" className="signup-link">Sign Up</Link>
           </p>
           {' '}
-          {/* Add this link */}
           <button className="login-button" type="submit" disabled={username === ''}>
             Login
           </button>

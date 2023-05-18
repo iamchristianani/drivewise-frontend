@@ -26,11 +26,11 @@ const ReservationForm = () => {
     e.preventDefault();
     if (car === '' || date === '' || city === '') return;
     try {
-      await axios.post(`https://drivewise.up.railway.app/api/v1/users/${user.id}/reservations`, { car_id: 1, reservation_date: date, city });
-      setCar([0, '']);
+      await axios.post(`https://drivewise.up.railway.app/api/v1/users/${user.id}/reservations`, { car_id: car, reservation_date: date, city });
+      setCar(0);
       setDate('');
       setCity('');
-      navigate('/');
+      navigate('/my_reservations');
     } catch (err) {
       if (!err?.response) {
         setErrMsg('No Server Response');
@@ -74,12 +74,12 @@ const ReservationForm = () => {
                 className="select_form_comp"
                 required
               >
-                <option value="" disabled hidden>
+                <option value="" hidden>
                   Select Car
                 </option>
-                {cars.map((car) => (
+                {data.cars.map((car) => (
                   <option key={car.id} value={car.id}>
-                    {car.model}
+                    {car.make} {' '} {car.model}
                   </option>
                 ))}
               </select>
