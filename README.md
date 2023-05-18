@@ -78,7 +78,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://rails-budget-app-5jzx.onrender.com)
+- [Live Demo Link](https://drivewise.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
