@@ -63,18 +63,20 @@ export const signupByUsername = (username) => async (dispatch) => {
   dispatch(authSlice.actions.dataRequest());
   console.log(username);
   try {
-    const newUser = await axios.post(URL, { username });
+    // Send a request to create a new user with the provided username
+    await axios.post(`${URL}`, { username });
 
-    if (!newUser.ok) {
-      throw new Error('Signup Failed');
-    }
+    // Retrieve the user data from the backend
     const response = await fetch(`${URL}/${username}`);
     const data = await response.json();
+
+    // Dispatch the action with the retrieved user data
     dispatch(authSlice.actions.loginSuccess(data));
   } catch (error) {
     dispatch(authSlice.actions.authFailure(error.message));
   }
 };
+
 export const signoutByUsername = () => async (dispatch) => {
   dispatch(authSlice.actions.dataRequest());
   localStorage.removeItem(USER_STORAGE_KEY);
