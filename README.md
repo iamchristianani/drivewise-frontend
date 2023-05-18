@@ -49,7 +49,7 @@
 # Backend App Link <a name ='backend'></a>
 
 [Backend App Link](https://github.com/iamchristianani/drivewise-backend.git)
-
+- The API documentation can be found [here](https://drivewise.up.railway.app/api-docs/index.html)
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
