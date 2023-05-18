@@ -10,6 +10,7 @@
 
 - [📖 About the Project](#about-project)
 - [Backend App Link](#backend)
+- [Kanban Board](#kanban-board)
 - [Preview](#preview)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
@@ -46,9 +47,14 @@
   </tr>
   </table>
   
-# Backend App Link <a name ='backend'></a>
+## Backend App Link <a name ='backend'></a>
 - The link for the backend part of the app can be found [here](https://github.com/iamchristianani/drivewise-backend.git)
 - The API documentation can be found [here](https://drivewise.up.railway.app/api-docs/index.html)
+
+## Kanban Board <a name ="kanban-board"></a>
+- The Kanban board can be found [here](https://github.com/users/iamchristianani/projects/5)
+- Screenshot of the initial state of our Kanban board can be found [here](https://user-images.githubusercontent.com/116313214/236166625-8a56fd11-49e7-4056-93e5-631dec336bd4.png)
+ 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -135,6 +141,8 @@ To run tests, run the following command:
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
+
+> We have a total number of 4 team members, namely:
 
 👤 **Roy Jumah**
 
