@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/drivewise-frontend/static/css/main.4faa7533.css",
+    "main.js": "/drivewise-frontend/static/js/main.af809b8e.js",
+    "static/js/787.117667dc.chunk.js": "/drivewise-frontend/static/js/787.117667dc.chunk.js",
+    "static/media/drivewise_logo.png": "/drivewise-frontend/static/media/drivewise_logo.734a0709e61448bfd3d2.png",
+    "index.html": "/drivewise-frontend/index.html",
+    "main.4faa7533.css.map": "/drivewise-frontend/static/css/main.4faa7533.css.map",
+    "main.af809b8e.js.map": "/drivewise-frontend/static/js/main.af809b8e.js.map",
+    "787.117667dc.chunk.js.map": "/drivewise-frontend/static/js/787.117667dc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4faa7533.css",
+    "static/js/main.af809b8e.js"
+  ]
+}
