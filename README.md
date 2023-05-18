@@ -10,6 +10,7 @@
 
 - [📖 About the Project](#about-project)
 - [Backend App Link](#backend)
+- [Preview](#preview)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
@@ -35,6 +36,9 @@
 **DriveWise** is an application that simplifies test drive bookings with seamless CRUD functionalities, providing a hassle-free experience for exploring and experiencing your desired cars.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Preview <a name ="preview"></a>
+
 
 # Backend App Link <a name ='backend'></a>
 [Backend App Link](https://github.com/iamchristianani/drivewise-backend.git)
