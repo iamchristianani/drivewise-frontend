@@ -150,9 +150,10 @@ To run tests, run the following command:
 
 👤 **Christian Ani**
 
-- GitHub: [@anichristian](https://github.com/iamchristianani)
-- Twitter: [@ChristianANi](https://twitter.com/)
-- LinkedIn: [chrisitian_ani](https://www.linkedin.com/)
+- GitHub: [@iamchristianani](https://github.com/iamchristianani)
+- Twitter: [@kriznode](https://twitter.com/kriznode)
+- LinkedIn: [Christian Ani](https://www.linkedin.com/in/anikriz/)
+
 
 👤 **Ahmed Abas**
 
