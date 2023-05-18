@@ -30,11 +30,26 @@ const NewCar = () => {
   });
 
   function handleChange(e) {
-    const { name, value } = e.target;
-    setCar((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    const { name, type, value } = e.target;
+
+    if (type === 'number') {
+      const parsedValue = parseInt(value, 10);
+
+      if (!Number.isNaN(parsedValue) && (parsedValue >= 0 || value === '')) {
+        setCar((prevData) => ({
+          ...prevData,
+          [name]: parsedValue,
+        }));
+      } else {
+        console.log('Please enter a non-negative number.');
+        e.target.value = '';
+      }
+    } else {
+      setCar((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    }
   }
 
   function handleCheckboxChange(e) {
