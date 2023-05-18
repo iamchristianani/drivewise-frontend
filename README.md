@@ -39,7 +39,13 @@
 
 ## Preview <a name ="preview"></a>
 
-
+<table style="border-collapse: collapse; border: 0;">
+  <tr>
+    <td><img src="https://github.com/RoyJumah/Leaderboard/assets/61903079/0cb23ac2-6aec-4229-a07c-d37ccc621053"></td>
+    <td><img src="https://github.com/iamchristianani/drivewise-frontend/assets/61903079/5194a563-b566-4e5c-b0ad-a265f9912f9b"></td>
+    
+  </tr>
+  </table>
 # Backend App Link <a name ='backend'></a>
 [Backend App Link](https://github.com/iamchristianani/drivewise-backend.git)
 
