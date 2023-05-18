@@ -47,8 +47,7 @@
   </table>
   
 # Backend App Link <a name ='backend'></a>
-
-[Backend App Link](https://github.com/iamchristianani/drivewise-backend.git)
+- The link for the backend part of the app can be found [here](https://github.com/iamchristianani/drivewise-backend.git)
 - The API documentation can be found [here](https://drivewise.up.railway.app/api-docs/index.html)
 ## 🛠 Built With <a name="built-with"></a>
 
